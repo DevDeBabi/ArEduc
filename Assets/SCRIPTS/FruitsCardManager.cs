@@ -201,6 +201,11 @@ public class FruitsCardManager : MonoBehaviour
         
         GameObject newFruit = Instantiate(fruitPrefabs[currentFruitIndex], showPos.position, fruitPrefabs[currentFruitIndex].transform.rotation, showPos);
         currentFruit = newFruit.GetComponent<FruitVariables>();
+        if (currentFruit.instantiateParticule != null)
+        {
+            GameObject particule = Instantiate(currentFruit.instantiateParticule, newFruit.transform.position, Quaternion.identity) as GameObject;
+            Destroy(particule, 5f);
+        }
         if (animateScaleOutIn)
         {
             searchVector3NewFruit = currentFruit.transform.localScale * currentFruit.scaleMax;
