@@ -175,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7878508035964272148}
+  - component: {fileID: 7683911244647235950}
   m_Layer: 0
   m_Name: Pomme
   m_TagString: Untagged
@@ -189,9 +190,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4257361971309065234}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0673, y: 0, z: 0.10567236}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6.8232765, y: 6.8232765, z: 6.8232765}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1405055469450965742}
@@ -200,6 +201,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7683911244647235950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257361971309065234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13535de6cbd04b6aa2cb8740b8288ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleMax: 1.2
+  instantiateParticule: {fileID: 0}
+  FrenchConf:
+    name: Pomme
+    clipAudio: {fileID: 0}
+  EnglishConf:
+    name: Apple
+    clipAudio: {fileID: 0}
 --- !u!1 &8406020269404398244
 GameObject:
   m_ObjectHideFlags: 0
