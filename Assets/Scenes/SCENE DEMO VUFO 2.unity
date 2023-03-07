@@ -718,7 +718,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472380082}
   m_LocalRotation: {x: -0.258819, y: -0, z: -0, w: 0.9659259}
-  m_LocalPosition: {x: 0, y: 0, z: -0.07}
+  m_LocalPosition: {x: 0, y: 0, z: -0.157}
   m_LocalScale: {x: -0.8, y: 0.8000001, z: 0.8000001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -729,7 +729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.01696, y: 0.957}
+  m_AnchoredPosition: {x: 0.01696, y: 1.108}
   m_SizeDelta: {x: 0.974, y: 0.9072}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &472380084
@@ -1073,19 +1073,19 @@ MonoBehaviour:
   PosNameFruit: {fileID: 472380083}
   animateRotate: 1
   rotateSpeed: 8.5
-  animateScaleOutIn: 0
-  timeScaleOutIn: 1
+  animateScaleOutIn: 1
+  timeScaleOutIn: 0.33
   selectedLanguage: 0
   audioNoFound: {fileID: 1977049132}
   FrenchConf:
     infoNotFound: La carte fruit est introuvable.(la carte doit rester dans le champ)
-    clipAudioNotFound: {fileID: 0}
-    decaleForCallAudio: 0.4
+    clipAudioNotFound: {fileID: 8300000, guid: 430f4fab642f8425496119ef56d7a51e, type: 3}
+    decaleForCallAudio: 0.65
   EnglishConf:
     infoNotFound: card not found.
     clipAudioNotFound: {fileID: 0}
-    decaleForCallAudio: 0.4
-  isFrenchNoFound: 1
+    decaleForCallAudio: 0.65
+  isFrenchCard: 1
 --- !u!1 &787257420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,8 +1146,8 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: FruitsShower, Assembly-CSharp
+      - m_Target: {fileID: 702125246}
+        m_TargetAssemblyTypeName: FruitsCardManager, Assembly-CSharp
         m_MethodName: MyArFounded
         m_Mode: 1
         m_Arguments:
@@ -1161,8 +1161,8 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: FruitsShower, Assembly-CSharp
+      - m_Target: {fileID: 702125246}
+        m_TargetAssemblyTypeName: FruitsCardManager, Assembly-CSharp
         m_MethodName: MyArNotThere
         m_Mode: 1
         m_Arguments:
@@ -1529,7 +1529,9 @@ Transform:
   m_LocalPosition: {x: 1000, y: 1000, z: 1000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1634456567}
+  - {fileID: 1977049133}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2145,7 +2147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1295254904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3421,9 +3423,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570115194}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1602802177
 GameObject:
@@ -3617,7 +3619,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613951168}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -3652,7 +3654,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3741,13 +3743,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634456565}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 505, y: 550.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1091990219}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1687725909
 GameObject:
@@ -3993,7 +3995,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1977049131
 GameObject:
@@ -4115,13 +4117,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977049131}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 505, y: 550.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1091990219}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125079491
 GameObject:
@@ -4150,7 +4152,7 @@ RectTransform:
   m_GameObject: {fileID: 2125079491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1444082863}

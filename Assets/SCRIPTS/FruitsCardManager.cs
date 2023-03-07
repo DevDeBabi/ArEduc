@@ -25,7 +25,7 @@ public class FruitsCardManager : MonoBehaviour
     public bool animateRotate = true;
     [Range(5f, 25f)] public float rotateSpeed = 10f;
     public bool animateScaleOutIn = false;
-    [Range(0.2f, 3f)] public float timeScaleOutIn = 1f;
+    [Range(0.1f, 3f)] public float timeScaleOutIn = 0.5f;
     private float speedScaleX, speedScaleY, speedScaleZ;
     private Vector3 searchVector3NewFruit = new Vector3();
 
@@ -50,8 +50,9 @@ public class FruitsCardManager : MonoBehaviour
     public ConfigNotFound FrenchConf;
     public ConfigNotFound EnglishConf;
 
-    public bool isFrenchNoFound = true;
-    bool currentAnimate = false;
+    public bool isFrenchCard = true;
+    private bool currentAnimate = false;
+    private bool stopAnimate ;
 
     void LateUpdate()
     {
@@ -71,9 +72,13 @@ public class FruitsCardManager : MonoBehaviour
                 if (currentFruit != null)
                 {
                     Transform curr = currentFruit.transform;
-                    curr.localScale = Vector3.MoveTowards(currentFruit.transform.localScale, new Vector3(searchVector3NewFruit.x, currentFruit.transform.localScale.y, currentFruit.transform.localScale.z), Time.deltaTime * speedScaleX);
-                    curr.localScale = Vector3.MoveTowards(currentFruit.transform.localScale, new Vector3(currentFruit.transform.localScale.x, searchVector3NewFruit.y, currentFruit.transform.localScale.z), Time.deltaTime * speedScaleY);
-                    curr.localScale = Vector3.MoveTowards(currentFruit.transform.localScale, new Vector3(currentFruit.transform.localScale.x, currentFruit.transform.localScale.y, searchVector3NewFruit.z), Time.deltaTime * speedScaleZ);
+                    if (!stopAnimate)
+                    {
+                        print("here");
+                        curr.localScale = Vector3.MoveTowards(currentFruit.transform.localScale, new Vector3(searchVector3NewFruit.x, currentFruit.transform.localScale.y, currentFruit.transform.localScale.z), Time.deltaTime * speedScaleX);
+                        curr.localScale = Vector3.MoveTowards(currentFruit.transform.localScale, new Vector3(currentFruit.transform.localScale.x, searchVector3NewFruit.y, currentFruit.transform.localScale.z), Time.deltaTime * speedScaleY);
+                        curr.localScale = Vector3.MoveTowards(currentFruit.transform.localScale, new Vector3(currentFruit.transform.localScale.x, currentFruit.transform.localScale.y, searchVector3NewFruit.z), Time.deltaTime * speedScaleZ);
+                    }
                 }
             }
     }
@@ -84,14 +89,14 @@ public class FruitsCardManager : MonoBehaviour
         if (cameraAr != null)
         {
             camPos = cameraAr.position;
-            camPos.y = showPos.position.y;
+            //camPos.y = showPos.position.y;
             PosNameFruit.LookAt(camPos);
         }
 
         if (currentFruit != null)
             if (animateRotate)
             {
-                currentFruit.transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+                showPos.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
             }
             else
             {
@@ -161,6 +166,12 @@ public class FruitsCardManager : MonoBehaviour
         yield return new WaitForSeconds(timeScaleOutIn);
         SpawnLogic(prev);
     }
+    IEnumerator StopAnimate()
+    {
+        yield return new WaitForSeconds(timeScaleOutIn);
+        stopAnimate = true;
+    }
+
     void SpawnLogic(bool prev)
     {
         if (currentFruit != null)
@@ -188,20 +199,24 @@ public class FruitsCardManager : MonoBehaviour
             }
         }
         
-        GameObject newFruit = Instantiate(fruitPrefabs[currentFruitIndex], showPos.position, Quaternion.identity, showPos);
+        GameObject newFruit = Instantiate(fruitPrefabs[currentFruitIndex], showPos.position, fruitPrefabs[currentFruitIndex].transform.rotation, showPos);
         currentFruit = newFruit.GetComponent<FruitVariables>();
         if (animateScaleOutIn)
         {
-            currentFruit.transform.localScale = new Vector3(0,0,0);
             searchVector3NewFruit = currentFruit.transform.localScale * currentFruit.scaleMax;
+            currentFruit.transform.localScale = new Vector3(0,0,0);
             speedScaleX = searchVector3NewFruit.x / timeScaleOutIn;
             speedScaleY = searchVector3NewFruit.y / timeScaleOutIn;
             speedScaleZ = searchVector3NewFruit.z / timeScaleOutIn;
+            stopAnimate = false;
+            StartCoroutine(StopAnimate());
+
         }
         else
         {
             currentFruit.transform.localScale = currentFruit.transform.localScale * currentFruit.scaleMax;
         }
+       
         currentAnimate = false;
         AudioAndTextLogic();
 
@@ -240,6 +255,7 @@ public class FruitsCardManager : MonoBehaviour
         CancelInvoke();
         if (currentFruit == null)
         {
+
             SpawnLogic(false);
         }
     }
@@ -248,7 +264,7 @@ public class FruitsCardManager : MonoBehaviour
     {
         if (canvasManager.currentlySelected == null || canvasManager.canScan == false)
             return;
-        if (isFrenchNoFound)
+        if (isFrenchCard)
         {
             myCanvasTxtInfoNoFound.text = FrenchConf.infoNotFound;
             selectedFor = FrenchConf.clipAudioNotFound;
@@ -267,6 +283,9 @@ public class FruitsCardManager : MonoBehaviour
     void CallPlayNofound()
     {
         if (selectedFor != null)
+        {
             audioNoFound.PlayOneShot(selectedFor);
+            print("audio played:" + selectedFor.name);
+        }
     }
 }
