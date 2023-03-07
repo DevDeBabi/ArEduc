@@ -1081,11 +1081,11 @@ MonoBehaviour:
   audioNoFound: {fileID: 1977049132}
   FrenchConf:
     infoNotFound: La carte fruit est introuvable.(la carte doit rester dans le champ)
-    clipAudioNotFound: {fileID: 8300000, guid: 230792853d65f4d348d76e7ddef8b219, type: 3}
+    clipAudioNotFound: {fileID: 0}
     decaleForCallAudio: 0.65
   EnglishConf:
     infoNotFound: card not found.
-    clipAudioNotFound: {fileID: 8300000, guid: 85d2c57d8fa9e463093e00b29946577f, type: 3}
+    clipAudioNotFound: {fileID: 0}
     decaleForCallAudio: 0.65
   isFrenchCard: 0
 --- !u!1 &787257420
