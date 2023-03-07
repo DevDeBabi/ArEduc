@@ -7,6 +7,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject principalCanvas;
     public GameObject noArCanvas;
     public List<GameObject> allAppCanvas;
+    public GameObject[] cardImageTarget;
     public GameObject currentlySelected;
     public bool canScan;
     [Range(5f, 25f)] public float speedAnimationAlpha = 10f;
@@ -154,6 +155,26 @@ public class CanvasManager : MonoBehaviour
 
         SwitcherCanvasMode(CurrentDoIt.showNoAr, currentlySelected);
       
+    }
+    public void GoToPrincipalMenu()
+    {
+        if (currentlySelected != null)
+        {
+            try
+            {
+                for (int i = 0; i < cardImageTarget.Length; i++)
+                {
+                    if (cardImageTarget[i].activeInHierarchy)
+                        cardImageTarget[i].SendMessage("AllCancel");
+                }
+            }
+            catch
+            {
+                print("aucun cancel effectuer");
+            }
+        }
+        canScan = false;
+        SwitcherCanvasMode(CurrentDoIt.showPrincipalMenu, null);
     }
     private void LateUpdate()
     {

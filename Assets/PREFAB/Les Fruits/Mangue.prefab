@@ -100,7 +100,7 @@ MonoBehaviour:
   instantiateParticule: {fileID: 0}
   FrenchConf:
     name: Mangue
-    clipAudio: {fileID: 0}
+    clipAudio: {fileID: 8300000, guid: a1ea18422f8cd44e8a610eb808328818, type: 3}
   EnglishConf:
     name: Mango
-    clipAudio: {fileID: 0}
+    clipAudio: {fileID: 8300000, guid: d73a97ea0f38645569daae72dd11147d, type: 3}

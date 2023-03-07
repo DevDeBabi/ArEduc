@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class FruitsCardManager : MonoBehaviour
@@ -15,6 +16,7 @@ public class FruitsCardManager : MonoBehaviour
     public GameObject myCanvas;
     public TextMeshProUGUI myCanvasTxtInfoNoFound;
     public TextMeshProUGUI txtShowNameFruit;
+    public Button btnAudioRetake;
     public AudioSource audioS;
     public bool animateBtnCardFruit = true;
     [Range(5f, 25f)] public float showSpeed = 10f;
@@ -92,6 +94,8 @@ public class FruitsCardManager : MonoBehaviour
             //camPos.y = showPos.position.y;
             PosNameFruit.LookAt(camPos);
         }
+
+        btnAudioRetake.interactable = !audioS.isPlaying;
 
         if (currentFruit != null)
             if (animateRotate)
@@ -256,6 +260,7 @@ public class FruitsCardManager : MonoBehaviour
         }
         canvasManager.SwitcherCanvasMode(CanvasManager.CurrentDoIt.showCanvasAr, myCanvas);
         audioNoFound.Stop();
+        audioS.Stop();
         isActive = true;
         CancelInvoke();
         if (currentFruit == null)
@@ -264,20 +269,39 @@ public class FruitsCardManager : MonoBehaviour
             SpawnLogic(false);
         }
     }
+    public void ListenAudio()
+    {
+        if (currentFruit == null)
+            return;
 
+        audioS.Stop();
+        // Jouer et afficher les informations de l'objet toucher en fonction de la langue
+        switch (selectedLanguage)
+        {
+            case CurrLanguage.french:
+                if (currentFruit.FrenchConf.clipAudio != null)
+                    audioS.PlayOneShot(currentFruit.FrenchConf.clipAudio);
+                break;
+            case CurrLanguage.english:
+                if (currentFruit.EnglishConf.clipAudio != null)
+                    audioS.PlayOneShot(currentFruit.EnglishConf.clipAudio);
+                break;
+        }
+    }
     public void MyArNotThere()
     {
         if (canvasManager.currentlySelected == null || canvasManager.canScan == false)
             return;
+        audioS.Stop();
         if (isFrenchCard)
         {
-            myCanvasTxtInfoNoFound.text = FrenchConf.infoNotFound;
+            //myCanvasTxtInfoNoFound.text = FrenchConf.infoNotFound;
             selectedFor = FrenchConf.clipAudioNotFound;
             Invoke("CallPlayNofound", FrenchConf.decaleForCallAudio);
         }
         else
         {
-            myCanvasTxtInfoNoFound.text = EnglishConf.infoNotFound;
+           // myCanvasTxtInfoNoFound.text = EnglishConf.infoNotFound;
             selectedFor = EnglishConf.clipAudioNotFound;
             Invoke("CallPlayNofound", EnglishConf.decaleForCallAudio);
         }
@@ -291,6 +315,18 @@ public class FruitsCardManager : MonoBehaviour
         {
             audioNoFound.PlayOneShot(selectedFor);
             print("audio played:" + selectedFor.name);
+        }
+    }
+
+    public void AllCancel()
+    {
+        currentFruitIndex = -1;
+        audioS.Stop();
+        audioNoFound.Stop();
+        if (currentFruit != null)
+        {
+            PosNameFruit.GetComponent<Animator>().SetTrigger("hide");
+            Destroy(currentFruit.gameObject, 0.2f);
         }
     }
 }
