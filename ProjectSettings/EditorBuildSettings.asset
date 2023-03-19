@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LOADING SCENES/FIRST_LOADING.unity
     guid: 95f601112f36c471699edab888f221c5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CONNEXION PANNEL/CONNEXION_PANNEL.unity
     guid: c635939f636e64a04ab3d202d5656a34
   - enabled: 1
@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EDCUCATION SCENE/EDUCATION_ENG.unity
     guid: f21e27f4278b54fc7982765711785e16
+  - enabled: 1
+    path: Assets/Scenes/FRUIT SCENE ENG/DEMO.unity
+    guid: 0f641bd7fbdf6ce40a94b6de76d90107
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: e612fd05f60d5d7438af40d522837c16, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e48419b4a37536a45adf7b8aac09933b, type: 2}

@@ -12773,7 +12773,7 @@ IL_0162:
 		DefaultValueAttribute_tD45612CBB8D83D43A266980AB11467557BF753CC* L_81 = V_6;
 		NullCheck(L_81);
 		RuntimeObject* L_82;
-		L_82 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(4 /* System.Object System.ComponentModel.DefaultValueAttribute::get_Value() */, L_81);
+		L_82 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(6 /* System.Object System.ComponentModel.DefaultValueAttribute::get_Value() */, L_81);
 		NullCheck(L_80);
 		JsonProperty_set_DefaultValue_m95FA7C08A1CEE5A8EF4AE7F369E5A58704B2626D(L_80, L_82, NULL);
 	}

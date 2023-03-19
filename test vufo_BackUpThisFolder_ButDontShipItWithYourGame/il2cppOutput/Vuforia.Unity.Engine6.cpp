@@ -14394,7 +14394,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TraceJsonReader__ctor_m27161774E6BC71687
 		String_t* L_5;
 		L_5 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralB62AA2CC6BFDA437017A321F61AE9B5B2FF52ADE, L_4, NULL);
 		NullCheck(L_3);
-		VirtualActionInvoker1< String_t* >::Invoke(14 /* System.Void System.IO.TextWriter::Write(System.String) */, L_3, L_5);
+		VirtualActionInvoker1< String_t* >::Invoke(15 /* System.Void System.IO.TextWriter::Write(System.String) */, L_3, L_5);
 		StringWriter_tF48052BE4F980E5C85403221E835768E4156267D* L_6 = __this->____sw_17;
 		JsonTextWriter_tAF7D7448E922BC07032AD079053C7417A4C4A595* L_7 = (JsonTextWriter_tAF7D7448E922BC07032AD079053C7417A4C4A595*)il2cpp_codegen_object_new(JsonTextWriter_tAF7D7448E922BC07032AD079053C7417A4C4A595_il2cpp_TypeInfo_var);
 		NullCheck(L_7);
@@ -14777,7 +14777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TraceJsonWriter__ctor_m5044C6F2CE893C8EC
 		String_t* L_5;
 		L_5 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral95C8A5370D26D671D01AC2995934B40AF9E59DB1, L_4, NULL);
 		NullCheck(L_3);
-		VirtualActionInvoker1< String_t* >::Invoke(14 /* System.Void System.IO.TextWriter::Write(System.String) */, L_3, L_5);
+		VirtualActionInvoker1< String_t* >::Invoke(15 /* System.Void System.IO.TextWriter::Write(System.String) */, L_3, L_5);
 		StringWriter_tF48052BE4F980E5C85403221E835768E4156267D* L_6 = __this->____sw_15;
 		JsonTextWriter_tAF7D7448E922BC07032AD079053C7417A4C4A595* L_7 = (JsonTextWriter_tAF7D7448E922BC07032AD079053C7417A4C4A595*)il2cpp_codegen_object_new(JsonTextWriter_tAF7D7448E922BC07032AD079053C7417A4C4A595_il2cpp_TypeInfo_var);
 		NullCheck(L_7);
