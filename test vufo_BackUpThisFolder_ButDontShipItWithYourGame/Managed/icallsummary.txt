@@ -545,6 +545,7 @@ UnityEngine.Input::get_imeCompositionMode
 UnityEngine.IntegratedSubsystem::SetHandle
 UnityEngine.IntegratedSubsystem::Start
 UnityEngine.IntegratedSubsystem::Stop
+UnityEngine.JsonUtility::FromJsonInternal
 UnityEngine.LayerMask::NameToLayer
 UnityEngine.LayerMask::LayerToName
 UnityEngine.Light::get_useColorTemperature

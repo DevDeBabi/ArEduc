@@ -810,8 +810,10 @@ struct ConfigObj_tF4DBC0C2261885D0594DE375959E25265465B2EC  : public RuntimeObje
 {
 	// System.String FruitVariables/ConfigObj::name
 	String_t* ___name_0;
+	// UnityEngine.AudioClip FruitVariables/ConfigObj::clipAudioTo
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___clipAudioTo_1;
 	// UnityEngine.AudioClip FruitVariables/ConfigObj::clipAudio
-	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___clipAudio_1;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___clipAudio_2;
 };
 
 // LTDescr/<>c
@@ -24249,7 +24251,7 @@ IL_0043:
 		NullCheck(L_24);
 		ConfigObj_tF4DBC0C2261885D0594DE375959E25265465B2EC* L_25 = L_24->___FrenchConf_6;
 		NullCheck(L_25);
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_26 = L_25->___clipAudio_1;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_26 = L_25->___clipAudio_2;
 		ConfigAudio_tD60DAFEE17FD5F8F17A422CDCAB9AA3660216634* L_27 = __this->___FrenchConf_46;
 		NullCheck(L_27);
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_28 = L_27->___audioMiddleSentence_4;
@@ -24306,7 +24308,7 @@ IL_00d7:
 		NullCheck(L_48);
 		ConfigObj_tF4DBC0C2261885D0594DE375959E25265465B2EC* L_49 = L_48->___EnglishConf_7;
 		NullCheck(L_49);
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_50 = L_49->___clipAudio_1;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_50 = L_49->___clipAudio_2;
 		ConfigAudio_tD60DAFEE17FD5F8F17A422CDCAB9AA3660216634* L_51 = __this->___EnglishConf_47;
 		NullCheck(L_51);
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_52 = L_51->___audioMiddleSentence_4;
