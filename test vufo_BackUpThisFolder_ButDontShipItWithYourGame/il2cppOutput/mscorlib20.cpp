@@ -3108,6 +3108,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextInfo_OnDeserialized_m86CE3E0EA7944C1BF29A1202213BF0A86632DB93 (TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* __this, const RuntimeMethod* method) ;
 // System.Void System.Globalization.TextInfo::SetReadOnlyState(System.Boolean)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TextInfo_SetReadOnlyState_m96282842532B04ECC10FCFEC2DA6B9F495B02766_inline (TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* __this, bool ___readOnly0, const RuntimeMethod* method) ;
+// System.String System.Globalization.CultureData::get_SLIST()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CultureData_get_SLIST_mB31631B7B108A09EDD18212BDC9D32E2A91CE3DA_inline (CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D* __this, const RuntimeMethod* method) ;
 // System.Boolean System.Globalization.TextInfo::IsAscii(System.Char)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TextInfo_IsAscii_mC4992695C136A0EA4EFCF2AD51B28E1023C66C61 (Il2CppChar ___c0, const RuntimeMethod* method) ;
 // System.Boolean System.Globalization.TextInfo::get_IsAsciiCasingSameAsInvariant()
@@ -14493,6 +14495,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Calendar_IsLeapYear_m4F98AE1F5F0402DCB2D
 		return L_1;
 	}
 }
+// System.DateTime System.Globalization.Calendar::ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D Calendar_ToDateTime_m864CD52D309509591B7BE1ED28BB97B992FD3F44 (Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* __this, int32_t ___year0, int32_t ___month1, int32_t ___day2, int32_t ___hour3, int32_t ___minute4, int32_t ___second5, int32_t ___millisecond6, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___year0;
+		int32_t L_1 = ___month1;
+		int32_t L_2 = ___day2;
+		int32_t L_3 = ___hour3;
+		int32_t L_4 = ___minute4;
+		int32_t L_5 = ___second5;
+		int32_t L_6 = ___millisecond6;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_7;
+		L_7 = VirtualFuncInvoker8< DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t >::Invoke(23 /* System.DateTime System.Globalization.Calendar::ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32) */, __this, L_0, L_1, L_2, L_3, L_4, L_5, L_6, 0);
+		return L_7;
+	}
+}
 // System.Boolean System.Globalization.Calendar::TryToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Calendar_TryToDateTime_mB9FCB93FFA24E773B4CE1BFF046E3F678FEB2CAA (Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* __this, int32_t ___year0, int32_t ___month1, int32_t ___day2, int32_t ___hour3, int32_t ___minute4, int32_t ___second5, int32_t ___millisecond6, int32_t ___era7, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* ___result8, const RuntimeMethod* method) 
 {
@@ -14522,7 +14540,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Calendar_TryToDateTime_mB9FCB93FFA24E773
 		int32_t L_9 = ___millisecond6;
 		int32_t L_10 = ___era7;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_11;
-		L_11 = VirtualFuncInvoker8< DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t >::Invoke(22 /* System.DateTime System.Globalization.Calendar::ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32) */, __this, L_3, L_4, L_5, L_6, L_7, L_8, L_9, L_10);
+		L_11 = VirtualFuncInvoker8< DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t >::Invoke(23 /* System.DateTime System.Globalization.Calendar::ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32) */, __this, L_3, L_4, L_5, L_6, L_7, L_8, L_9, L_10);
 		*(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D*)L_2 = L_11;
 		V_0 = (bool)1;
 		goto IL_002f;
@@ -14585,7 +14603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Calendar_IsValidMonth_m0E513A4D6540018F5
 		int32_t L_0 = ___year0;
 		int32_t L_1 = ___era2;
 		bool L_2;
-		L_2 = VirtualFuncInvoker2< bool, int32_t, int32_t >::Invoke(24 /* System.Boolean System.Globalization.Calendar::IsValidYear(System.Int32,System.Int32) */, __this, L_0, L_1);
+		L_2 = VirtualFuncInvoker2< bool, int32_t, int32_t >::Invoke(25 /* System.Boolean System.Globalization.Calendar::IsValidYear(System.Int32,System.Int32) */, __this, L_0, L_1);
 		if (!L_2)
 		{
 			goto IL_001d;
@@ -14620,7 +14638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Calendar_IsValidDay_mA84D1D6A94C33A0030C
 		int32_t L_1 = ___month1;
 		int32_t L_2 = ___era3;
 		bool L_3;
-		L_3 = VirtualFuncInvoker3< bool, int32_t, int32_t, int32_t >::Invoke(25 /* System.Boolean System.Globalization.Calendar::IsValidMonth(System.Int32,System.Int32,System.Int32) */, __this, L_0, L_1, L_2);
+		L_3 = VirtualFuncInvoker3< bool, int32_t, int32_t, int32_t >::Invoke(26 /* System.Boolean System.Globalization.Calendar::IsValidMonth(System.Int32,System.Int32,System.Int32) */, __this, L_0, L_1, L_2);
 		if (!L_3)
 		{
 			goto IL_0021;
@@ -14699,10 +14717,10 @@ IL_0019:
 	}
 	{
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(27 /* System.Int32 System.Globalization.Calendar::get_TwoDigitYearMax() */, __this);
+		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(28 /* System.Int32 System.Globalization.Calendar::get_TwoDigitYearMax() */, __this);
 		int32_t L_5 = ___year0;
 		int32_t L_6;
-		L_6 = VirtualFuncInvoker0< int32_t >::Invoke(27 /* System.Int32 System.Globalization.Calendar::get_TwoDigitYearMax() */, __this);
+		L_6 = VirtualFuncInvoker0< int32_t >::Invoke(28 /* System.Int32 System.Globalization.Calendar::get_TwoDigitYearMax() */, __this);
 		G_B4_0 = ((int32_t)(L_4/((int32_t)100)));
 		if ((((int32_t)L_5) > ((int32_t)((int32_t)(L_6%((int32_t)100))))))
 		{
@@ -17381,7 +17399,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendar_GetDayOfMonth_mBEBC
 		int64_t L_0;
 		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___time0), NULL);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(30 /* System.Int32 System.Globalization.GregorianCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 3);
+		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(31 /* System.Int32 System.Globalization.GregorianCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 3);
 		return L_1;
 	}
 }
@@ -17674,7 +17692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendar_GetMonth_m263904FE6
 		int64_t L_0;
 		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___time0), NULL);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(30 /* System.Int32 System.Globalization.GregorianCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 2);
+		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(31 /* System.Int32 System.Globalization.GregorianCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 2);
 		return L_1;
 	}
 }
@@ -17751,7 +17769,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendar_GetYear_mFD72780552
 		int64_t L_0;
 		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___time0), NULL);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(30 /* System.Int32 System.Globalization.GregorianCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 0);
+		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(31 /* System.Int32 System.Globalization.GregorianCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 0);
 		return L_1;
 	}
 }
@@ -20215,7 +20233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HijriCalendar_GetDayOfMonth_mF9C718BF
 		int64_t L_0;
 		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___time0), NULL);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(30 /* System.Int32 System.Globalization.HijriCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 3);
+		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(31 /* System.Int32 System.Globalization.HijriCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 3);
 		return L_1;
 	}
 }
@@ -20360,7 +20378,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HijriCalendar_GetMonth_m2D4AA3A343992
 		int64_t L_0;
 		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___time0), NULL);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(30 /* System.Int32 System.Globalization.HijriCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 2);
+		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(31 /* System.Int32 System.Globalization.HijriCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 2);
 		return L_1;
 	}
 }
@@ -20388,7 +20406,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HijriCalendar_GetYear_m3754F45443EA92
 		int64_t L_0;
 		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___time0), NULL);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(30 /* System.Int32 System.Globalization.HijriCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 0);
+		L_1 = VirtualFuncInvoker2< int32_t, int64_t, int32_t >::Invoke(31 /* System.Int32 System.Globalization.HijriCalendar::GetDatePart(System.Int64,System.Int32) */, __this, L_0, 0);
 		return L_1;
 	}
 }
@@ -22987,6 +23005,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextInfo_SetReadOnlyState_m96282842532B0
 		return;
 	}
 }
+// System.String System.Globalization.TextInfo::get_ListSeparator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TextInfo_get_ListSeparator_m32174D2AE16B417A257A3B496B16D556184129F5 (TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___m_listSeparator_0;
+		if (L_0)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D* L_1 = __this->___m_cultureData_3;
+		NullCheck(L_1);
+		String_t* L_2;
+		L_2 = CultureData_get_SLIST_mB31631B7B108A09EDD18212BDC9D32E2A91CE3DA_inline(L_1, NULL);
+		__this->___m_listSeparator_0 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_listSeparator_0), (void*)L_2);
+	}
+
+IL_0019:
+	{
+		String_t* L_3 = __this->___m_listSeparator_0;
+		return L_3;
+	}
+}
 // System.Char System.Globalization.TextInfo::ToLower(System.Char)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar TextInfo_ToLower_mB442BAE653B21A106F854AAC29AEDC21B34E58CF (TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* __this, Il2CppChar ___c0, const RuntimeMethod* method) 
 {
@@ -23415,7 +23458,7 @@ IL_0047:
 		Il2CppChar* L_19 = V_6;
 		int32_t L_20 = *((uint16_t*)L_19);
 		Il2CppChar L_21;
-		L_21 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, __this, L_20);
+		L_21 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, __this, L_20);
 		*((int16_t*)L_18) = (int16_t)L_21;
 		Il2CppChar* L_22 = V_6;
 		V_6 = ((Il2CppChar*)il2cpp_codegen_add((intptr_t)L_22, 2));
@@ -23537,7 +23580,7 @@ IL_0047:
 		Il2CppChar* L_19 = V_6;
 		int32_t L_20 = *((uint16_t*)L_19);
 		Il2CppChar L_21;
-		L_21 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, __this, L_20);
+		L_21 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, __this, L_20);
 		*((int16_t*)L_18) = (int16_t)L_21;
 		Il2CppChar* L_22 = V_6;
 		V_6 = ((Il2CppChar*)il2cpp_codegen_add((intptr_t)L_22, 2));
@@ -24800,7 +24843,7 @@ IL_0029:
 		V_4 = ((Il2CppChar*)il2cpp_codegen_add((intptr_t)L_12, 2));
 		int32_t L_13 = *((uint16_t*)L_12);
 		Il2CppChar L_14;
-		L_14 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, __this, L_13);
+		L_14 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, __this, L_13);
 		*((int16_t*)L_10) = (int16_t)L_14;
 		int32_t L_15 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_15, 1));
@@ -24830,7 +24873,7 @@ IL_004f:
 		V_4 = ((Il2CppChar*)il2cpp_codegen_add((intptr_t)L_21, 2));
 		int32_t L_22 = *((uint16_t*)L_21);
 		Il2CppChar L_23;
-		L_23 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, __this, L_22);
+		L_23 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, __this, L_22);
 		*((int16_t*)L_19) = (int16_t)L_23;
 		int32_t L_24 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_24, 1));
@@ -25179,7 +25222,7 @@ IL_0019:
 		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_3 = __this->___helper_43;
 		int32_t L_4 = ___year0;
 		int32_t L_5;
-		L_5 = VirtualFuncInvoker0< int32_t >::Invoke(27 /* System.Int32 System.Globalization.Calendar::get_TwoDigitYearMax() */, __this);
+		L_5 = VirtualFuncInvoker0< int32_t >::Invoke(28 /* System.Int32 System.Globalization.Calendar::get_TwoDigitYearMax() */, __this);
 		NullCheck(L_3);
 		int32_t L_6;
 		L_6 = GregorianCalendarHelper_ToFourDigitYear_m4E5C6CAD9E549AA1919514CC019D223036110B78(L_3, L_4, L_5, NULL);
@@ -25404,6 +25447,13 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TextInfo_SetReadOnlyState_m9
 		bool L_0 = ___readOnly0;
 		__this->___m_isReadOnly_1 = L_0;
 		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CultureData_get_SLIST_mB31631B7B108A09EDD18212BDC9D32E2A91CE3DA_inline (CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___sListSeparator_19;
+		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CultureData_get_SISO639LANGNAME_mE278D78EE726CC8269BB8477C0BA7242AA79D3C8_inline (CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D* __this, const RuntimeMethod* method) 

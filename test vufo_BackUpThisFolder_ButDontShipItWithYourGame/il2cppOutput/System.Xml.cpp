@@ -6852,7 +6852,7 @@ IL_00e4:
 		int32_t L_43 = L_42->___bytesUsed_9;
 		NullCheck(L_35);
 		int32_t L_44;
-		L_44 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(30 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_35, L_37, L_39, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_41)->max_length)), L_43)));
+		L_44 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_35, L_37, L_39, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_41)->max_length)), L_43)));
 		V_4 = L_44;
 		int32_t L_45 = V_4;
 		if (L_45)
@@ -7961,7 +7961,7 @@ IL_0081:
 		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_19 = ___encoding0;
 		NullCheck(L_19);
 		Decoder_tE16E789E38B25DD304004FC630EA8B21000ECBBC* L_20;
-		L_20 = VirtualFuncInvoker0< Decoder_tE16E789E38B25DD304004FC630EA8B21000ECBBC* >::Invoke(30 /* System.Text.Decoder System.Text.Encoding::GetDecoder() */, L_19);
+		L_20 = VirtualFuncInvoker0< Decoder_tE16E789E38B25DD304004FC630EA8B21000ECBBC* >::Invoke(32 /* System.Text.Decoder System.Text.Encoding::GetDecoder() */, L_19);
 		L_18->___decoder_6 = L_20;
 		Il2CppCodeGenWriteBarrier((void**)(&L_18->___decoder_6), (void*)L_20);
 		return;
@@ -8329,7 +8329,7 @@ IL_0066:
 		int32_t L_26 = L_25->___charPos_1;
 		NullCheck(L_22);
 		int32_t L_27;
-		L_27 = VirtualFuncInvoker3< int32_t, CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*, int32_t, int32_t >::Invoke(12 /* System.Int32 System.Text.Encoding::GetByteCount(System.Char[],System.Int32,System.Int32) */, L_22, L_24, 0, L_26);
+		L_27 = VirtualFuncInvoker3< int32_t, CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*, int32_t, int32_t >::Invoke(13 /* System.Int32 System.Text.Encoding::GetByteCount(System.Char[],System.Int32,System.Int32) */, L_22, L_24, 0, L_26);
 		*((int32_t*)L_19) = (int32_t)((int32_t)il2cpp_codegen_add(L_20, L_27));
 	}
 
@@ -8755,7 +8755,7 @@ IL_0312:
 		int32_t L_141 = L_140->___bytesUsed_9;
 		NullCheck(L_133);
 		int32_t L_142;
-		L_142 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(30 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_133, L_135, L_137, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_139)->max_length)), L_141)));
+		L_142 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_133, L_135, L_137, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_139)->max_length)), L_141)));
 		V_10 = L_142;
 		int32_t L_143 = V_10;
 		if (L_143)
@@ -9522,7 +9522,7 @@ IL_019a:
 		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_79 = L_78->___encoding_3;
 		NullCheck(L_79);
 		int32_t L_80;
-		L_80 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(11 /* System.Int32 System.Text.Encoding::GetByteCount(System.String) */, L_79, _stringLiteralEF420ABFDDBDA7B9EE665D85EF62E4A437554003);
+		L_80 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(12 /* System.Int32 System.Text.Encoding::GetByteCount(System.String) */, L_79, _stringLiteralEF420ABFDDBDA7B9EE665D85EF62E4A437554003);
 		G_B32_0 = _stringLiteralE1A5710D77750DE15143DC722BD4D7F361D7E8BD;
 		G_B32_1 = __this;
 		if ((((int32_t)L_80) == ((int32_t)1)))
@@ -10407,7 +10407,7 @@ IL_07ef:
 		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_333 = L_332->___encoding_3;
 		NullCheck(L_333);
 		int32_t L_334;
-		L_334 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(11 /* System.Int32 System.Text.Encoding::GetByteCount(System.String) */, L_333, _stringLiteralEF420ABFDDBDA7B9EE665D85EF62E4A437554003);
+		L_334 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(12 /* System.Int32 System.Text.Encoding::GetByteCount(System.String) */, L_333, _stringLiteralEF420ABFDDBDA7B9EE665D85EF62E4A437554003);
 		G_B123_0 = _stringLiteralE1A5710D77750DE15143DC722BD4D7F361D7E8BD;
 		G_B123_1 = __this;
 		if ((((int32_t)L_334) == ((int32_t)1)))

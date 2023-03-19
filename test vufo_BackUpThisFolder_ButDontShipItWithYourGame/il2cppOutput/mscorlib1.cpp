@@ -22851,7 +22851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_ToLower_m6191ABA3DC514ED47C1
 		L_1 = VirtualFuncInvoker0< TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* >::Invoke(10 /* System.Globalization.TextInfo System.Globalization.CultureInfo::get_TextInfo() */, L_0);
 		NullCheck(L_1);
 		String_t* L_2;
-		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(8 /* System.String System.Globalization.TextInfo::ToLower(System.String) */, L_1, __this);
+		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(9 /* System.String System.Globalization.TextInfo::ToLower(System.String) */, L_1, __this);
 		return L_2;
 	}
 }
@@ -22880,7 +22880,7 @@ IL_000e:
 		L_3 = VirtualFuncInvoker0< TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* >::Invoke(10 /* System.Globalization.TextInfo System.Globalization.CultureInfo::get_TextInfo() */, L_2);
 		NullCheck(L_3);
 		String_t* L_4;
-		L_4 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(8 /* System.String System.Globalization.TextInfo::ToLower(System.String) */, L_3, __this);
+		L_4 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(9 /* System.String System.Globalization.TextInfo::ToLower(System.String) */, L_3, __this);
 		return L_4;
 	}
 }
@@ -22902,7 +22902,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_ToLowerInvariant_mBE32C93DE2
 		L_1 = VirtualFuncInvoker0< TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* >::Invoke(10 /* System.Globalization.TextInfo System.Globalization.CultureInfo::get_TextInfo() */, L_0);
 		NullCheck(L_1);
 		String_t* L_2;
-		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(8 /* System.String System.Globalization.TextInfo::ToLower(System.String) */, L_1, __this);
+		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(9 /* System.String System.Globalization.TextInfo::ToLower(System.String) */, L_1, __this);
 		return L_2;
 	}
 }
@@ -22924,7 +22924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_ToUpper_m5F499BC30C2A5F5C962
 		L_1 = VirtualFuncInvoker0< TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* >::Invoke(10 /* System.Globalization.TextInfo System.Globalization.CultureInfo::get_TextInfo() */, L_0);
 		NullCheck(L_1);
 		String_t* L_2;
-		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(10 /* System.String System.Globalization.TextInfo::ToUpper(System.String) */, L_1, __this);
+		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(11 /* System.String System.Globalization.TextInfo::ToUpper(System.String) */, L_1, __this);
 		return L_2;
 	}
 }
@@ -22953,7 +22953,7 @@ IL_000e:
 		L_3 = VirtualFuncInvoker0< TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* >::Invoke(10 /* System.Globalization.TextInfo System.Globalization.CultureInfo::get_TextInfo() */, L_2);
 		NullCheck(L_3);
 		String_t* L_4;
-		L_4 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(10 /* System.String System.Globalization.TextInfo::ToUpper(System.String) */, L_3, __this);
+		L_4 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(11 /* System.String System.Globalization.TextInfo::ToUpper(System.String) */, L_3, __this);
 		return L_4;
 	}
 }
@@ -22975,7 +22975,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_ToUpperInvariant_mD73F658CDE
 		L_1 = VirtualFuncInvoker0< TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* >::Invoke(10 /* System.Globalization.TextInfo System.Globalization.CultureInfo::get_TextInfo() */, L_0);
 		NullCheck(L_1);
 		String_t* L_2;
-		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(10 /* System.String System.Globalization.TextInfo::ToUpper(System.String) */, L_1, __this);
+		L_2 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(11 /* System.String System.Globalization.TextInfo::ToUpper(System.String) */, L_1, __this);
 		return L_2;
 	}
 }
@@ -26368,7 +26368,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_CreateStringFromEncoding_mA2
 		int32_t L_2 = ___byteLength1;
 		NullCheck(L_0);
 		int32_t L_3;
-		L_3 = VirtualFuncInvoker3< int32_t, uint8_t*, int32_t, DecoderNLS_tF18CBF663DFA66748F619AD7C6D6C4859DBFA80B* >::Invoke(23 /* System.Int32 System.Text.Encoding::GetCharCount(System.Byte*,System.Int32,System.Text.DecoderNLS) */, L_0, L_1, L_2, (DecoderNLS_tF18CBF663DFA66748F619AD7C6D6C4859DBFA80B*)NULL);
+		L_3 = VirtualFuncInvoker3< int32_t, uint8_t*, int32_t, DecoderNLS_tF18CBF663DFA66748F619AD7C6D6C4859DBFA80B* >::Invoke(25 /* System.Int32 System.Text.Encoding::GetCharCount(System.Byte*,System.Int32,System.Text.DecoderNLS) */, L_0, L_1, L_2, (DecoderNLS_tF18CBF663DFA66748F619AD7C6D6C4859DBFA80B*)NULL);
 		V_0 = L_3;
 		int32_t L_4 = V_0;
 		if (L_4)
@@ -26399,7 +26399,7 @@ IL_0013:
 		int32_t L_15 = V_0;
 		NullCheck(L_11);
 		int32_t L_16;
-		L_16 = VirtualFuncInvoker5< int32_t, uint8_t*, int32_t, Il2CppChar*, int32_t, DecoderNLS_tF18CBF663DFA66748F619AD7C6D6C4859DBFA80B* >::Invoke(27 /* System.Int32 System.Text.Encoding::GetChars(System.Byte*,System.Int32,System.Char*,System.Int32,System.Text.DecoderNLS) */, L_11, L_12, L_13, L_14, L_15, (DecoderNLS_tF18CBF663DFA66748F619AD7C6D6C4859DBFA80B*)NULL);
+		L_16 = VirtualFuncInvoker5< int32_t, uint8_t*, int32_t, Il2CppChar*, int32_t, DecoderNLS_tF18CBF663DFA66748F619AD7C6D6C4859DBFA80B* >::Invoke(29 /* System.Int32 System.Text.Encoding::GetChars(System.Byte*,System.Int32,System.Char*,System.Int32,System.Text.DecoderNLS) */, L_11, L_12, L_13, L_14, L_15, (DecoderNLS_tF18CBF663DFA66748F619AD7C6D6C4859DBFA80B*)NULL);
 		V_2 = (Il2CppChar*)((uintptr_t)0);
 		return L_8;
 	}
@@ -27138,7 +27138,7 @@ IL_003b:
 		int32_t L_22 = *((uint16_t*)L_21);
 		NullCheck(L_20);
 		Il2CppChar L_23;
-		L_23 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_20, L_22);
+		L_23 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_20, L_22);
 		V_8 = L_23;
 		goto IL_00aa;
 	}
@@ -27150,7 +27150,7 @@ IL_005f:
 		int32_t L_26 = *((uint16_t*)L_25);
 		NullCheck(L_24);
 		Il2CppChar L_27;
-		L_27 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_24, L_26);
+		L_27 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_24, L_26);
 		Il2CppChar L_28 = V_8;
 		if ((!(((uint32_t)L_27) == ((uint32_t)L_28))))
 		{
@@ -27170,14 +27170,14 @@ IL_0071:
 		int32_t L_32 = *((uint16_t*)((Il2CppChar*)il2cpp_codegen_add((intptr_t)L_30, ((intptr_t)il2cpp_codegen_multiply(((intptr_t)L_31), 2)))));
 		NullCheck(L_29);
 		Il2CppChar L_33;
-		L_33 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_29, L_32);
+		L_33 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_29, L_32);
 		TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* L_34 = V_1;
 		Il2CppChar* L_35 = V_3;
 		int32_t L_36 = V_9;
 		int32_t L_37 = *((uint16_t*)((Il2CppChar*)il2cpp_codegen_add((intptr_t)L_35, ((intptr_t)il2cpp_codegen_multiply(((intptr_t)L_36), 2)))));
 		NullCheck(L_34);
 		Il2CppChar L_38;
-		L_38 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_34, L_37);
+		L_38 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_34, L_37);
 		if ((!(((uint32_t)L_33) == ((uint32_t)L_38))))
 		{
 			goto IL_00a4;
@@ -27478,7 +27478,7 @@ IL_003b:
 		int32_t L_24 = *((uint16_t*)L_23);
 		NullCheck(L_22);
 		Il2CppChar L_25;
-		L_25 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_22, L_24);
+		L_25 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_22, L_24);
 		V_9 = L_25;
 		goto IL_00c1;
 	}
@@ -27490,7 +27490,7 @@ IL_006a:
 		int32_t L_28 = *((uint16_t*)L_27);
 		NullCheck(L_26);
 		Il2CppChar L_29;
-		L_29 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_26, L_28);
+		L_29 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_26, L_28);
 		Il2CppChar L_30 = V_9;
 		if ((!(((uint32_t)L_29) == ((uint32_t)L_30))))
 		{
@@ -27514,13 +27514,13 @@ IL_007d:
 		int32_t L_36 = *((uint16_t*)L_35);
 		NullCheck(L_34);
 		Il2CppChar L_37;
-		L_37 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_34, L_36);
+		L_37 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_34, L_36);
 		TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* L_38 = V_1;
 		Il2CppChar* L_39 = V_8;
 		int32_t L_40 = *((uint16_t*)L_39);
 		NullCheck(L_38);
 		Il2CppChar L_41;
-		L_41 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(9 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_38, L_40);
+		L_41 = VirtualFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(10 /* System.Char System.Globalization.TextInfo::ToUpper(System.Char) */, L_38, L_40);
 		if ((((int32_t)L_37) == ((int32_t)L_41)))
 		{
 			goto IL_00ad;
