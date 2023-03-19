@@ -4142,8 +4142,12 @@ MonoBehaviour:
   fruitPrefabs:
   - {fileID: 6428430704657775780, guid: 1b60225f056f74d41a138005ae3c5404, type: 3}
   - {fileID: 1350477052269101854, guid: 68d3193330b0b8d4dbcff57148c13396, type: 3}
-  - {fileID: 2137511540050665726, guid: 4953a4e2940bf2b47942a69e8749e057, type: 3}
+  - {fileID: 5432112195420713428, guid: 71e017d36e7bb7e4780903fe2feaa3cb, type: 3}
   - {fileID: 2190513547423860161, guid: 635262a3a7c5b8c46b75afb998c91dd1, type: 3}
+  - {fileID: 2137511540050665726, guid: 4953a4e2940bf2b47942a69e8749e057, type: 3}
+  - {fileID: 5500118033676108454, guid: 9fd3726603a4dc649b445dbf0d678ad5, type: 3}
+  - {fileID: 4206220976478939201, guid: f74a8230c48e3c642ae5ba7970f473c6, type: 3}
+  - {fileID: 4257361971309065234, guid: 2d965568e921b304c8ee20ca787fef36, type: 3}
   firstCanvasConsigne: {fileID: 896942139}
   firstTxtConsigne: {fileID: 1690182244}
   posSpawn:
@@ -4179,23 +4183,20 @@ MonoBehaviour:
     endR: ' good responses'
     decaleForCallAudio: 0.56
   EnglishConf:
-    firstConsigne: Prepare yourself, he will have 10 questions, listen to them well
-      and answer correctly
-    firstLancementAudio: {fileID: 8300000, guid: 5cdc076c7cdab4a66925294fb8ae9234, type: 3}
+    firstConsigne: "Pr\xE9pare toi, il aura 10 questions, \xE9coute les bien et r\xE9pond
+      correctement"
+    firstLancementAudio: {fileID: 8300000, guid: a2a5fa4f58c594746928510ea8f9064b, type: 3}
     timeWaitFirstLancement: 0.5
-    middleConsigne: Touch the fruit that corresponds to
-    audioMiddleSentence: {fileID: 8300000, guid: 39fd0be486a3a43e083d2736ac4a6e60, type: 3}
+    middleConsigne: "Parmi ces deux fruits lequel est app\xE9l\xE9"
+    audioMiddleSentence: {fileID: 8300000, guid: d64d15fb2f9ce514a9107b4004854e3c, type: 3}
     perfectFind:
-    - {fileID: 8300000, guid: 8640f6a28a959441c9e3143a58ba797c, type: 3}
-    - {fileID: 8300000, guid: 9105e992af57a42c281237cb48993f7c, type: 3}
+    - {fileID: 8300000, guid: a72c3c7f8fef643b5975f8fc56477ba4, type: 3}
     badFind:
-    - {fileID: 8300000, guid: d61c1d09a68db473cbec8575a6affaeb, type: 3}
-    - {fileID: 8300000, guid: 68afb21837605453a8e7538ca028bbd3, type: 3}
-    infoNotFound: The fruit card cannot be found. <br/>(the card must remain in the
-      field)
-    clipAudioNotFound: {fileID: 8300000, guid: e160c2d8c297f4798b419c787d8e55a9, type: 3}
+    - {fileID: 8300000, guid: b83c652bd99d5440d8d51c88e7df3745, type: 3}
+    infoNotFound: "La carte fruit est introuvable. (garde la en face de la cam\xE9ra)"
+    clipAudioNotFound: {fileID: 8300000, guid: 68d89c8c4f0fd4e909fe2f96da062c41, type: 3}
     endR: ' good responses'
-    decaleForCallAudio: 0.4
+    decaleForCallAudio: 1.35
   findGood: {fileID: 1932978625}
   badFind: {fileID: 1304745649}
   selectedLanguage: 1
@@ -6255,8 +6256,12 @@ MonoBehaviour:
   prefabFruit:
   - {fileID: 6428430704657775780, guid: 1b60225f056f74d41a138005ae3c5404, type: 3}
   - {fileID: 1350477052269101854, guid: 68d3193330b0b8d4dbcff57148c13396, type: 3}
-  - {fileID: 2137511540050665726, guid: 4953a4e2940bf2b47942a69e8749e057, type: 3}
+  - {fileID: 5432112195420713428, guid: 71e017d36e7bb7e4780903fe2feaa3cb, type: 3}
   - {fileID: 2190513547423860161, guid: 635262a3a7c5b8c46b75afb998c91dd1, type: 3}
+  - {fileID: 2137511540050665726, guid: 4953a4e2940bf2b47942a69e8749e057, type: 3}
+  - {fileID: 5500118033676108454, guid: 9fd3726603a4dc649b445dbf0d678ad5, type: 3}
+  - {fileID: 4206220976478939201, guid: f74a8230c48e3c642ae5ba7970f473c6, type: 3}
+  - {fileID: 4257361971309065234, guid: 2d965568e921b304c8ee20ca787fef36, type: 3}
   currentIndex: -1
   canvasBtn: {fileID: 1825041965}
   listenAgain: {fileID: 74777177}
@@ -8950,10 +8955,10 @@ RectTransform:
   m_Father: {fileID: 670882835}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1247801089
 Animator:
@@ -8995,7 +9000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Touch for begin
+  m_text: Touche pour commencer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9022,8 +9027,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15877,22 +15882,6 @@ MonoBehaviour:
   selectedLanguage: 1
   audioNoFound: {fileID: 1977049132}
   FrenchConf:
-    firstConsigne: "Pr\xE9pare toi, il aura 10 questions, \xE9coute les bien et r\xE9pond
-      correctement"
-    firstLancementAudio: {fileID: 8300000, guid: a2a5fa4f58c594746928510ea8f9064b, type: 3}
-    timeWaitFirstLancement: 0.5
-    middleConsigne: Parmi ses deux fruits lequel est
-    audioMiddleSentence: {fileID: 8300000, guid: d56fcda01f08c4015b480c4d171509b1, type: 3}
-    perfectFind:
-    - {fileID: 8300000, guid: a72c3c7f8fef643b5975f8fc56477ba4, type: 3}
-    badFind:
-    - {fileID: 8300000, guid: b83c652bd99d5440d8d51c88e7df3745, type: 3}
-    infoNotFound: "La carte fruit est introuvable. <br/>(Mettez la en face de la
-      cam\xE9ra)"
-    clipAudioNotFound: {fileID: 8300000, guid: 68d89c8c4f0fd4e909fe2f96da062c41, type: 3}
-    endR: ' good responses'
-    decaleForCallAudio: 0.59
-  EnglishConf:
     firstConsigne: Prepare yourself, he will have 10 questions, listen to them well
       and answer correctly
     firstLancementAudio: {fileID: 8300000, guid: 5cdc076c7cdab4a66925294fb8ae9234, type: 3}
@@ -15905,10 +15894,24 @@ MonoBehaviour:
     badFind:
     - {fileID: 8300000, guid: d61c1d09a68db473cbec8575a6affaeb, type: 3}
     - {fileID: 8300000, guid: 68afb21837605453a8e7538ca028bbd3, type: 3}
-    infoNotFound: The fruit card cannot be found. <br/>(the card must remain in the
-      field)
+    infoNotFound: The fruit card cannot be found. (the card must remain in the field)
     clipAudioNotFound: {fileID: 8300000, guid: e160c2d8c297f4798b419c787d8e55a9, type: 3}
     endR: ' good responses'
+    decaleForCallAudio: 1.24
+  EnglishConf:
+    firstConsigne: "Pr\xE9pare toi, il aura 10 questions, \xE9coute les bien et r\xE9pond
+      correctement"
+    firstLancementAudio: {fileID: 8300000, guid: a2a5fa4f58c594746928510ea8f9064b, type: 3}
+    timeWaitFirstLancement: 0.5
+    middleConsigne: "Parmi ces deux fruits lequel est app\xE9l\xE9"
+    audioMiddleSentence: {fileID: 8300000, guid: d64d15fb2f9ce514a9107b4004854e3c, type: 3}
+    perfectFind:
+    - {fileID: 8300000, guid: a72c3c7f8fef643b5975f8fc56477ba4, type: 3}
+    badFind:
+    - {fileID: 8300000, guid: b83c652bd99d5440d8d51c88e7df3745, type: 3}
+    infoNotFound: "La carte fruit est introuvable. (garde la en face de la cam\xE9ra)"
+    clipAudioNotFound: {fileID: 8300000, guid: 68d89c8c4f0fd4e909fe2f96da062c41, type: 3}
+    endR: ' bonne reponses'
     decaleForCallAudio: 1.25
   isFrenchCard: 0
 --- !u!1 &2092276912

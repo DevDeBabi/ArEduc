@@ -19,6 +19,7 @@ public class NoArLearnFruit : MonoBehaviour
     float speed = 0.1f;
     int oldIndex = -1;
     public Button listenAgain;
+    
     [System.Serializable]
     public enum language
     {
@@ -58,6 +59,7 @@ public class NoArLearnFruit : MonoBehaviour
                 audioS.PlayOneShot(current.GetComponent<FruitVariables>().EnglishConf.clipAudio);
                 break;
             case language.french:
+
                 audioS.PlayOneShot(current.GetComponent<FruitVariables>().FrenchConf.clipAudio);
                 break;
         }
@@ -94,6 +96,8 @@ public class NoArLearnFruit : MonoBehaviour
     {
         oldIndex = currentIndex;
         currentAnimate = false;
+        StopAllCoroutines();
+        CancelInvoke();
         audioS.Stop();
         GameObject current = prefabFruit[currentIndex];
         showImg.sprite = current.GetComponent<FruitVariables>().mySprite;

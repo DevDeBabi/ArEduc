@@ -134,10 +134,13 @@ MonoBehaviour:
   instantiateParticule: {fileID: 0}
   FrenchConf:
     name: Passion
+    clipAudioTo: {fileID: 0}
     clipAudio: {fileID: 0}
   EnglishConf:
     name: Passion
+    clipAudioTo: {fileID: 8300000, guid: 9eebb3e7ee9c2774faf161ba75e1725a, type: 3}
     clipAudio: {fileID: 8300000, guid: 3e118c57093454075ba597dfbd73e230, type: 3}
+  mySprite: {fileID: 21300000, guid: de3f8428ebf2a45a1bb7ec800a30a16b, type: 3}
 --- !u!1 &4829415603932939495
 GameObject:
   m_ObjectHideFlags: 0

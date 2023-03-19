@@ -207,6 +207,8 @@ public class NoArExerciceFruit : MonoBehaviour
     }
     void NextQuestion()
     {
+        CancelInvoke();
+        StopAllCoroutines();
         audioS.Stop();
         if (retired != null)
             currentFruitPrefabs.Remove(retired);

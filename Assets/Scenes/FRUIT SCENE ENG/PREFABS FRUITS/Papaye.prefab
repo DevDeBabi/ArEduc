@@ -133,10 +133,13 @@ MonoBehaviour:
   instantiateParticule: {fileID: 0}
   FrenchConf:
     name: Papaye
+    clipAudioTo: {fileID: 0}
     clipAudio: {fileID: 0}
   EnglishConf:
     name: Papaya
+    clipAudioTo: {fileID: 8300000, guid: a4263beabdc6f3342a790298080a1c43, type: 3}
     clipAudio: {fileID: 8300000, guid: 14a407781dd4745329da07203b5c4131, type: 3}
+  mySprite: {fileID: 21300000, guid: 8f26a2e6671ec422fa6032d15705363f, type: 3}
 --- !u!1 &6234326059861780352
 GameObject:
   m_ObjectHideFlags: 0

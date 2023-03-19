@@ -11,6 +11,7 @@ public class FruitExerciceManager : MonoBehaviour
     public GameObject endCanvas;
     public TextMeshProUGUI scoreTxt, scoreTxtFinishCanvas;
     public List<GameObject> fruitPrefabs;
+    List<GameObject> currentFruitPrefabs = new List<GameObject>();
     public GameObject notFoundTarget;
     public GameObject firstCanvasConsigne;
     public TextMeshProUGUI firstTxtConsigne;
@@ -356,38 +357,34 @@ public class FruitExerciceManager : MonoBehaviour
         yield return new WaitForSeconds(timeScaleOutIn);
         stopAnimateFruit1 = true;
     }
-
+    GameObject retired;
+    int good = 0;
     void NextQuestionLogic()
     {
-        List<GameObject> newList = new List<GameObject>(fruitPrefabs);
+        if (retired != null)
+            currentFruitPrefabs.Remove(retired);
+        if (currentFruitPrefabs.Count <= 1)
+        {
+            currentFruitPrefabs = new List<GameObject>(fruitPrefabs);
+        }
+        good = 0;
+        
         if (currentFruit.Count > 0)
         {
-            int val = 1;
-            if (Mathf.RoundToInt(1f * Random.Range(0, 10)) % 2 == 0)
+            if (Random.Range(0, 10) % 2 == 0)
             {
-                val = 0;
+                good = 1;
             }
-            GameObject toRemove = currentFruit[val].gameObject;
-            GameObject selected = newList[0];
-            for (int i = 0; i < newList.Count; i++)
-            {
-                if (newList[i].name.ToLower().Trim() == toRemove.name.ToLower().Trim())
-                {
-                    selected = newList[i];
-                }
-            }
-            newList.Remove(selected);
 
             Destroy(currentFruit[0]);
             Destroy(currentFruit[1]);
         }
 
-        GameObject fruitSelect1 = newList[Random.Range(0, newList.Count - 1)];
+        GameObject fruitSelect1 = currentFruitPrefabs[Random.Range(0, currentFruitPrefabs.Count - 1)];
+        currentFruitPrefabs.Remove(fruitSelect1);
 
-        newList.Remove(fruitSelect1);
-
-        GameObject fruitSelect2 = newList[Random.Range(0, newList.Count - 1)];
-
+        GameObject fruitSelect2 = currentFruitPrefabs[Random.Range(0, currentFruitPrefabs.Count - 1)];
+        currentFruitPrefabs.Remove(fruitSelect2);
 
         GameObject newFruit1 = Instantiate(fruitSelect1, posSpawn[0].position, fruitSelect1.transform.rotation, posSpawn[0]) as GameObject;
 
@@ -483,6 +480,8 @@ public class FruitExerciceManager : MonoBehaviour
         {
             return;
         }
+        if (currentFruitPrefabs.Count > 0)
+            currentFruitPrefabs.Clear();
         posQuestion.GetComponent<Animator>().SetTrigger("hide");
         firstCanvasConsigne.GetComponent<Animator>().SetTrigger("show");
         switch (selectedLanguage)

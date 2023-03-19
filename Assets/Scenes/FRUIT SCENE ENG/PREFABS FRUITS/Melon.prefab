@@ -50,9 +50,11 @@ MonoBehaviour:
   instantiateParticule: {fileID: 0}
   FrenchConf:
     name: Melon
+    clipAudioTo: {fileID: 0}
     clipAudio: {fileID: 0}
   EnglishConf:
     name: Melon
+    clipAudioTo: {fileID: 8300000, guid: 1591af38ad0d38048acd454718f4dc82, type: 3}
     clipAudio: {fileID: 8300000, guid: 43db70fa43c0245788a6945a9b577286, type: 3}
   mySprite: {fileID: 21300000, guid: 18f01b7eca0294014a25b78e0466f776, type: 3}
 --- !u!1 &4748979572429147416

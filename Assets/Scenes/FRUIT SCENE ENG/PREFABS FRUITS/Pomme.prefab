@@ -217,10 +217,13 @@ MonoBehaviour:
   instantiateParticule: {fileID: 0}
   FrenchConf:
     name: Pomme
+    clipAudioTo: {fileID: 0}
     clipAudio: {fileID: 0}
   EnglishConf:
     name: Apple
+    clipAudioTo: {fileID: 8300000, guid: fd079963232f71e4aa386ba0fcb46cf4, type: 3}
     clipAudio: {fileID: 8300000, guid: 619a1a494747e41aba3b27217fcc0759, type: 3}
+  mySprite: {fileID: 21300000, guid: 86de4d1d3329944f7b5bb74f732722eb, type: 3}
 --- !u!1 &8406020269404398244
 GameObject:
   m_ObjectHideFlags: 0
