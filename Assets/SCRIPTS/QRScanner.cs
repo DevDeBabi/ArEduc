@@ -9,14 +9,32 @@ using TMPro;
 public class QRScanner : MonoBehaviour
 {
     public TextMeshProUGUI debugTXT;
+    public RawImage rawImage;
     WebCamTexture webcamTexture;
     string QrCode = string.Empty;
-
-    void Start()
+    [Range(0f, 1.5f)] public float waitTime = 0.1f;
+    public ManagerPrincipalMenu managerPrincipalMenu;
+    bool finded = false;
+    public GameObject badCardPannel;
+    public void ActiveQrScan()
     {
-        var renderer = GetComponent<RawImage>();
+        badCardPannel.SetActive(false);
+        finded = false;
+        var renderer = rawImage;
         webcamTexture = new WebCamTexture(512, 512);
         renderer.texture = webcamTexture;
+        Invoke("QrScanLaunch", waitTime);
+    }
+    public void DisableQrScan()
+    {
+        CancelInvoke();
+        StopAllCoroutines();
+        webcamTexture.Stop();
+        gameObject.SetActive(false);
+    }
+
+    void QrScanLaunch()
+    {
         //renderer.material.mainTexture = webcamTexture;
         StartCoroutine(GetQRCode());
     }
@@ -24,7 +42,7 @@ public class QRScanner : MonoBehaviour
     IEnumerator GetQRCode()
     {
         IBarcodeReader barCodeReader = new BarcodeReader();
-       
+
         webcamTexture.Play();
         var snap = new Texture2D(webcamTexture.width, webcamTexture.height, TextureFormat.ARGB32, false);
         while (string.IsNullOrEmpty(QrCode))
@@ -35,7 +53,7 @@ public class QRScanner : MonoBehaviour
 
                 snap.SetPixels32(webcamTexture.GetPixels32());
                 var Result = barCodeReader.Decode(snap.GetRawTextureData(), webcamTexture.width, webcamTexture.height, RGBLuminanceSource.BitmapFormat.ARGB32);
-                
+
                 if (Result != null)
                 {
 
@@ -54,7 +72,42 @@ public class QRScanner : MonoBehaviour
         }
         webcamTexture.Stop();
     }
-    
+    public void DevLaunching(string sceneName)
+    {
+        if (sceneName == "BAD")
+        {
+            StartCoroutine(CheckIdCardUsername("12ed", sceneName, false));
+        }
+        else
+            StartCoroutine(CheckIdCardUsername("12ed", sceneName));
+    }
+
+    void GoOnGoodScene(string id, string name, string sceneName)
+    {
+        if (finded)
+            return;
+        StartCoroutine(CheckIdCardUsername(id, sceneName));
+    }
+
+    IEnumerator CheckIdCardUsername(string id, string sceneName, bool good = true)
+    {
+        finded = true;
+        yield return new WaitForSeconds(1f);
+        if (good == false)
+        {
+            badCardPannel.SetActive(true);
+            CancelInvoke();
+            StopAllCoroutines();
+            webcamTexture.Stop();
+        }
+        else
+        {
+            managerPrincipalMenu.LoadScene(sceneName);
+
+        }
+
+
+    }
     //private void OnGUI()
     //{
     //    int w = Screen.width, h = Screen.height;

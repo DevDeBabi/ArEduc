@@ -10,6 +10,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject[] cardImageTarget;
     public GameObject currentlySelected;
     public bool canScan;
+    
     [Range(5f, 25f)] public float speedAnimationAlpha = 10f;
 
     [System.Serializable]
@@ -158,6 +159,11 @@ public class CanvasManager : MonoBehaviour
     }
     public void GoToPrincipalMenu()
     {
+        AudioSource[] allAudio = GameObject.FindObjectsOfType<AudioSource>();
+        for (int i = 0; i < allAudio.Length; i++)
+        {
+            allAudio[i].Stop();
+        }
         if (currentlySelected != null)
         {
             try
