@@ -54,7 +54,7 @@ public class FruitsCardManager : MonoBehaviour
 
     public bool isFrenchCard = true;
     private bool currentAnimate = false;
-    private bool stopAnimate ;
+    private bool stopAnimate;
 
     void LateUpdate()
     {
@@ -154,7 +154,7 @@ public class FruitsCardManager : MonoBehaviour
                 speedScaleX = currentFruit.transform.localScale.x / timeScaleOutIn;
                 speedScaleY = currentFruit.transform.localScale.y / timeScaleOutIn;
                 speedScaleZ = currentFruit.transform.localScale.z / timeScaleOutIn;
-                
+
                 currentAnimate = true;
                 StartCoroutine(AnimateWaiting(prev));
             }
@@ -202,7 +202,7 @@ public class FruitsCardManager : MonoBehaviour
                 currentFruitIndex = fruitPrefabs.Count - 1;
             }
         }
-        
+
         GameObject newFruit = Instantiate(fruitPrefabs[currentFruitIndex], showPos.position, fruitPrefabs[currentFruitIndex].transform.rotation, showPos);
         currentFruit = newFruit.GetComponent<FruitVariables>();
         if (currentFruit.instantiateParticule != null)
@@ -213,7 +213,7 @@ public class FruitsCardManager : MonoBehaviour
         if (animateScaleOutIn)
         {
             searchVector3NewFruit = currentFruit.transform.localScale * currentFruit.scaleMax;
-            currentFruit.transform.localScale = new Vector3(0,0,0);
+            currentFruit.transform.localScale = new Vector3(0, 0, 0);
             speedScaleX = searchVector3NewFruit.x / timeScaleOutIn;
             speedScaleY = searchVector3NewFruit.y / timeScaleOutIn;
             speedScaleZ = searchVector3NewFruit.z / timeScaleOutIn;
@@ -225,12 +225,12 @@ public class FruitsCardManager : MonoBehaviour
         {
             currentFruit.transform.localScale = currentFruit.transform.localScale * currentFruit.scaleMax;
         }
-       
+
         currentAnimate = false;
         AudioAndTextLogic();
 
     }
-    
+    AudioClip goodAudio;
     void AudioAndTextLogic()
     {
         audioS.Stop();
@@ -238,14 +238,35 @@ public class FruitsCardManager : MonoBehaviour
         switch (selectedLanguage)
         {
             case CurrLanguage.french:
+                if (currentFruit.FrenchConf.clipAudioTo != null)
+                {
+                    audioS.PlayOneShot(currentFruit.FrenchConf.clipAudioTo);
+                    goodAudio = currentFruit.FrenchConf.clipAudio;
+                    Invoke("CallGoodName", currentFruit.FrenchConf.clipAudioTo.length - 0.8f);
+                }
+                else
+                {
+                    if (currentFruit.FrenchConf.clipAudio != null)
+                        audioS.PlayOneShot(currentFruit.FrenchConf.clipAudio);
+                }
+
                 txtShowNameFruit.text = currentFruit.FrenchConf.name;
-                if (currentFruit.FrenchConf.clipAudio != null)
-                    audioS.PlayOneShot(currentFruit.FrenchConf.clipAudio);
+
                 break;
             case CurrLanguage.english:
+                if (currentFruit.EnglishConf.clipAudioTo != null)
+                {
+                    audioS.PlayOneShot(currentFruit.EnglishConf.clipAudioTo);
+                    goodAudio = currentFruit.EnglishConf.clipAudio;
+                    Invoke("CallGoodName", currentFruit.EnglishConf.clipAudioTo.length - 0.8f);
+                }
+                else
+                {
+                    if (currentFruit.EnglishConf.clipAudio != null)
+                        audioS.PlayOneShot(currentFruit.EnglishConf.clipAudio);
+                }
+
                 txtShowNameFruit.text = currentFruit.EnglishConf.name;
-                if (currentFruit.EnglishConf.clipAudio != null)
-                    audioS.PlayOneShot(currentFruit.EnglishConf.clipAudio);
                 break;
         }
         PosNameFruit.GetComponent<Animator>().SetTrigger("show");
@@ -301,7 +322,7 @@ public class FruitsCardManager : MonoBehaviour
         }
         else
         {
-           // myCanvasTxtInfoNoFound.text = EnglishConf.infoNotFound;
+            // myCanvasTxtInfoNoFound.text = EnglishConf.infoNotFound;
             selectedFor = EnglishConf.clipAudioNotFound;
             Invoke("CallPlayNofound", EnglishConf.decaleForCallAudio);
         }
@@ -317,7 +338,10 @@ public class FruitsCardManager : MonoBehaviour
             print("audio played:" + selectedFor.name);
         }
     }
-
+    void CallGoodName()
+    {
+        audioS.PlayOneShot(goodAudio);
+    }
     public void AllCancel()
     {
         currentFruitIndex = -1;

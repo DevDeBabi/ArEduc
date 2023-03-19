@@ -458,7 +458,6 @@ public class FruitExerciceManager : MonoBehaviour
                 StartCoroutine(AudioPlayerFruit(currentFruit[selectedFruit].GetComponent<FruitVariables>().FrenchConf.clipAudio, FrenchConf.audioMiddleSentence.length-0.55f));
                 break;
             case CurrLanguage.english:
-               
                 txtQuestionFruit.text = EnglishConf.middleConsigne + " " + currentFruit[selectedFruit].GetComponent<FruitVariables>().EnglishConf.name;
                 audioS.PlayOneShot(EnglishConf.audioMiddleSentence);
                 StartCoroutine(AudioPlayerFruit(currentFruit[selectedFruit].GetComponent<FruitVariables>().EnglishConf.clipAudio, EnglishConf.audioMiddleSentence.length - 0.75f));

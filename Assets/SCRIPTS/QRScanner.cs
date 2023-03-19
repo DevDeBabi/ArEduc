@@ -25,6 +25,14 @@ public class QRScanner : MonoBehaviour
         renderer.texture = webcamTexture;
         Invoke("QrScanLaunch", waitTime);
     }
+    [System.Serializable]
+    public class CodeJson
+    {
+        public string id;
+        public string name;
+    }
+    public CodeJson jsonCode;
+
     public void DisableQrScan()
     {
         CancelInvoke();
@@ -63,6 +71,8 @@ public class QRScanner : MonoBehaviour
                     {
                         Debug.Log("DECODED TEXT FROM QR: " + QrCode);
                         debugTXT.text = QrCode;
+                        jsonCode= JsonUtility.FromJson<CodeJson>(QrCode);
+                        GoOnGoodScene(jsonCode.id,"",jsonCode.name);
                         break;
                     }
                 }
@@ -103,7 +113,6 @@ public class QRScanner : MonoBehaviour
         else
         {
             managerPrincipalMenu.LoadScene(sceneName);
-
         }
 
 

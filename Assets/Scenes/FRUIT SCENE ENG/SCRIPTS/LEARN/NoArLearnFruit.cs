@@ -89,6 +89,7 @@ public class NoArLearnFruit : MonoBehaviour
         canvasBtn.interactable = false;
         currentAnimate = true;
     }
+    AudioClip goodAudio;
     void CallFruit()
     {
         oldIndex = currentIndex;
@@ -100,20 +101,43 @@ public class NoArLearnFruit : MonoBehaviour
         switch (configLanguage)
         {
             case language.english:
-                audioS.PlayOneShot(current.GetComponent<FruitVariables>().EnglishConf.clipAudio);
+                if(current.GetComponent<FruitVariables>().EnglishConf.clipAudioTo!= null)
+                {
+                    audioS.PlayOneShot(current.GetComponent<FruitVariables>().EnglishConf.clipAudioTo);
+                    goodAudio = current.GetComponent<FruitVariables>().EnglishConf.clipAudio;
+                    Invoke("CallGoodName", current.GetComponent<FruitVariables>().EnglishConf.clipAudioTo.length - 0.8f);
+                }
+                else
+                {
+                    if (current.GetComponent<FruitVariables>().EnglishConf.clipAudio != null)
+                        audioS.PlayOneShot(current.GetComponent<FruitVariables>().EnglishConf.clipAudio);
+                }
                 txtNameFruit.text = current.GetComponent<FruitVariables>().EnglishConf.name;
                 break;
             case language.french:
-                audioS.PlayOneShot(current.GetComponent<FruitVariables>().FrenchConf.clipAudio);
+                if (current.GetComponent<FruitVariables>().FrenchConf.clipAudioTo != null)
+                {
+                    audioS.PlayOneShot(current.GetComponent<FruitVariables>().FrenchConf.clipAudioTo);
+                    goodAudio = current.GetComponent<FruitVariables>().FrenchConf.clipAudio;
+                    Invoke("CallGoodName", current.GetComponent<FruitVariables>().FrenchConf.clipAudioTo.length - 0.8f);
+                }
+                else
+                {
+                    if (current.GetComponent<FruitVariables>().FrenchConf.clipAudio != null)
+                        audioS.PlayOneShot(current.GetComponent<FruitVariables>().FrenchConf.clipAudio);
+                }
+               
                 txtNameFruit.text = current.GetComponent<FruitVariables>().FrenchConf.name;
                 break;
         }
         canvasBtn.interactable = true;
     }
-    private void LateUpdate()
+
+    void CallGoodName()
     {
-       
+        audioS.PlayOneShot(goodAudio);
     }
+
     private void Update()
     {
         if (currentAnimate && oldIndex != currentIndex)

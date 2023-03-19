@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 501846214, guid: 1b60225f056f74d41a138005ae3c5404, type: 3}
+      propertyPath: scaleMax
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 883512721616696820, guid: 1b60225f056f74d41a138005ae3c5404, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -54,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6428430704657775780, guid: 1b60225f056f74d41a138005ae3c5404, type: 3}
       propertyPath: m_Name
-      value: Ananas
+      value: Ananas Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -64,19 +68,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6428430704657775780, guid: 1b60225f056f74d41a138005ae3c5404, type: 3}
   m_PrefabInstance: {fileID: 8445961376657612256}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5739410989940941236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3170616279926022468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0691bc4b007cc46a3a30ee86e979835a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fruitExerciceManager: {fileID: 0}
 --- !u!65 &4484544173362733200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90,3 +81,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.017412093, y: 0.017932255, z: 0.029513655}
   m_Center: {x: 0.00027451347, y: -0.0013205803, z: 0.010677235}
+--- !u!114 &5739410989940941236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3170616279926022468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0691bc4b007cc46a3a30ee86e979835a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitExerciceManager: {fileID: 0}

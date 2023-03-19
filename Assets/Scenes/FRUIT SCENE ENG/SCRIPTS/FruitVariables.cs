@@ -10,6 +10,7 @@ public class FruitVariables : MonoBehaviour
     public class ConfigObj
     {
         public string name;
+        public AudioClip clipAudioTo;
         public AudioClip clipAudio;
     }
     [Header("Config fruit")]
