@@ -11,4 +11,10 @@ public class ConnexionManager : MonoBehaviour
         PlayerPrefs.SetString("iduser", "user" + Random.Range(0, 100));
         managerPrincipalMenu.LoadScene("MENU_PRINCIPAL");
     }
+
+
+    public void Quitter()
+    {
+        Application.Quit();
+    }
 }

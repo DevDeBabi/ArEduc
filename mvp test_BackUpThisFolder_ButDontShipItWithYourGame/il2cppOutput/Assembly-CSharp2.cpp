@@ -4532,6 +4532,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m6763D9767F033357F88B663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256 (String_t* ___key0, String_t* ___value1, const RuntimeMethod* method) ;
 // System.Void ManagerPrincipalMenu::LoadScene(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManagerPrincipalMenu_LoadScene_mD0B7EE0C3C72BD03DAE31B1F4B8ADBF47544B2CC (ManagerPrincipalMenu_tA3EB4A11F89B9355D30BF29D54E9C527BCEFC539* __this, String_t* ___sceneName0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Application::Quit()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_Quit_mE304382DB9A6455C2A474C8F364C7387F37E9281 (const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.GameObject::get_activeInHierarchy()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeInHierarchy_m49250F4F168DCC5388D5BE4F6A5681386907B109 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<UnityEngine.CanvasGroup>()
@@ -21811,6 +21813,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnexionManager_ConnexionDev_mE2B07635A
 		ManagerPrincipalMenu_tA3EB4A11F89B9355D30BF29D54E9C527BCEFC539* L_3 = __this->___managerPrincipalMenu_4;
 		NullCheck(L_3);
 		ManagerPrincipalMenu_LoadScene_mD0B7EE0C3C72BD03DAE31B1F4B8ADBF47544B2CC(L_3, _stringLiteral942967405EA287C3D7328CCF58A7BC03E635DEE5, NULL);
+		// }
+		return;
+	}
+}
+// System.Void ConnexionManager::Quitter()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnexionManager_Quitter_m76A4D0A75B13FA99CFB5D730F8AF4C563D624208 (ConnexionManager_tDB0BFE9B0519A3E1CEAFD9E405D24A2675D1EF4E* __this, const RuntimeMethod* method) 
+{
+	{
+		// Application.Quit();
+		Application_Quit_mE304382DB9A6455C2A474C8F364C7387F37E9281(NULL);
 		// }
 		return;
 	}

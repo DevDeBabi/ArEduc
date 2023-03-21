@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 511
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -333,7 +333,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 87}
     m_SelectedIDs: 82920100
     m_LastClickedID: 103042
-    m_ExpandedIDs: 00000000a4640000bc640000c464000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000032650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -361,7 +361,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 0000000032650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,22 +522,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/FRUIT SCENE ENG
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes/FRUIT SCENE ENG
+  - Assets
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\PROJET UNITY\ArEduc
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 263}
-    m_SelectedIDs: 06650000
-    m_LastClickedID: 25862
-    m_ExpandedIDs: 00000000a4640000b4640000bc640000c4640000f664000006650000a6650000ac65000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 32650000
+    m_LastClickedID: 25906
+    m_ExpandedIDs: 00000000326500004c65000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,7 +565,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a4640000
+    m_ExpandedIDs: 0000000032650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -693,9 +693,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: a0650000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9a79ffff627affffc289ffffc489ffff4a99ffff5e9fffff40a0fffffea5ffff4aa6ffff56b6ffff90b6ffffc2ceffffc4ceffff4cdeffff2ce0ffff80e0ffffd0e0ffff20e1fffffee2ffff94e9ffffe4e9fffff2edfffffaedffff5eeeffffaeeeffffceeeffffd2eeffff08efffff2efbffff868c00003491000096910000ba910000d6910000b4920000c6920000da920000e0920000ec02010012030100de0f0100341f0100721f01004421010090210100a8210100f4210100a42201003aa101005ca101006ca40100bca401001ea50100
+      m_ExpandedIDs: 2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 875.1768, y: 727.3896, z: 11.538884}
     speed: 2
-    m_Value: {x: 903.6465, y: 724.01184, z: 11.228854}
+    m_Value: {x: 875.1768, y: 727.3896, z: 11.538884}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 657.9517
     speed: 2
-    m_Value: 688.9547
+    m_Value: 657.9517
   m_Ortho:
     m_Target: 1
     speed: 2

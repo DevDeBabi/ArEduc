@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LOADING SCENES/FIRST_LOADING.unity
     guid: 95f601112f36c471699edab888f221c5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/CONNEXION PANNEL/CONNEXION_PANNEL.unity
     guid: c635939f636e64a04ab3d202d5656a34
   - enabled: 1
@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MATH SCENE/MATH_ENG.unity
     guid: b3a2b0ddf2fd849caaa1446215b02e1c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/EDCUCATION SCENE/EDUCATION_ENG.unity
     guid: f21e27f4278b54fc7982765711785e16
   - enabled: 1

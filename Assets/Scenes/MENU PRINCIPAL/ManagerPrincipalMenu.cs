@@ -7,6 +7,8 @@ public class ManagerPrincipalMenu : MonoBehaviour
 {
     public string loadingScene = "LOADING_TRANSITION";
 
+  
+
     public void Deconnexion(string connexionSceneName)
     {
         PlayerPrefs.DeleteAll();
