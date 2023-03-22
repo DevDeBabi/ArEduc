@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.4440681, g: 0.49333978, b: 0.57238823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6177,13 +6177,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: ar_id_123456
+  mTrackableName: c2
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/ar_educ.xml
-  mAspectRatio: 1.35
+  mAspectRatio: 0.669767
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.35
+  mHeight: 0.669767
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -6219,7 +6219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 787257423}
   mHiddenRoot: {fileID: 0}
-  mTargetName: ar_id_123456
+  mTargetName: c2
   mDatasetName: Vuforia/ar_educ.xml
   mCastedBehaviour: {fileID: 787257423}
   mMeshFilter: {fileID: 0}
@@ -6574,13 +6574,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: ar_id_121212
+  mTrackableName: c2
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/ar_educ.xml
-  mAspectRatio: 1.349144
+  mAspectRatio: 0.669767
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.349144
+  mHeight: 0.669767
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -6616,7 +6616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 801815329}
   mHiddenRoot: {fileID: 0}
-  mTargetName: ar_id_121212
+  mTargetName: c2
   mDatasetName: Vuforia/ar_educ.xml
   mCastedBehaviour: {fileID: 801815329}
   mMeshFilter: {fileID: 0}

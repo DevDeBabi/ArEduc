@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="ar_id_121212" size="1.000000 1.349144" />
-    <ImageTarget name="ar_id_123456" size="1.000000 1.350000" />
+    <ImageTarget name="c2" size="1.000000 0.669767" />
+    <ImageTarget name="b2df282e-3e94-4498-ba94-9dd37cf05688" size="1.000000 0.669767" />
   </Tracking>
 </QCARConfig>

@@ -561,6 +561,7 @@ public class FruitExerciceManager : MonoBehaviour
 
             currentFruit.Clear();
         }
+        StopAllCoroutines();
         CancelInvoke();
     }
 }
