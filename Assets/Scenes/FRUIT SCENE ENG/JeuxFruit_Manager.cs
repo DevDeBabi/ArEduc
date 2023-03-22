@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class JeuxFruit_Manager : MonoBehaviour
 {
+    public TextMeshProUGUI info;
     public List<Sprite> lesImage;
     public Sprite le_Fruit_Choisi;
 
@@ -32,22 +34,27 @@ public class JeuxFruit_Manager : MonoBehaviour
         if(d==0)
         {
             orange = true;
+            info.text = "Touche le fruit : Orange ";
         }
         if (d == 1)
         {
             papaye = true;
+            info.text = "Touche le fruit : Papaya ";
         }
         if (d == 2)
         {
             ananas = true;
+            info.text = "Touche le fruit : Pineapple ";
         }
         if (d == 3)
         {
             mangue = true;
+            info.text = "Touche le fruit : Mango ";
         }
         if (d >= 4)
         {
             pomme = true;
+            info.text = "Touche le fruit : Apple ";
         }
 
         le_Fruit_Choisi = lesImage[d];

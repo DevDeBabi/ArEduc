@@ -12447,6 +12447,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FruitsCardManager_AllCancel_m39EAAA773EB
 
 IL_0055:
 	{
+		// StopAllCoroutines();
+		MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318(__this, NULL);
+		// CancelInvoke();
+		MonoBehaviour_CancelInvoke_m177BCBDFCEA3E09C02E3E444BF4FBA648FAE3CFA(__this, NULL);
 		// }
 		return;
 	}
