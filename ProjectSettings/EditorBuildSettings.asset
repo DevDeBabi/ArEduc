@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FRUIT SCENE ENG/DEMO.unity
     guid: 0f641bd7fbdf6ce40a94b6de76d90107
+  - enabled: 1
+    path: Assets/Scenes/FRUIT SCENE ENG/JEUX FRUIT.unity
+    guid: f2596b240cb3feb4bbd24b2f2fbd06b5
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: e612fd05f60d5d7438af40d522837c16, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e48419b4a37536a45adf7b8aac09933b, type: 2}
