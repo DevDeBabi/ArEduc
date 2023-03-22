@@ -352,5 +352,7 @@ public class FruitsCardManager : MonoBehaviour
             PosNameFruit.GetComponent<Animator>().SetTrigger("hide");
             Destroy(currentFruit.gameObject, 0.2f);
         }
+        StopAllCoroutines();
+        CancelInvoke();
     }
 }
