@@ -676,6 +676,7 @@ IL2CPP_EXTERN_C RuntimeClass* AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A
 IL2CPP_EXTERN_C RuntimeClass* BarcodeReader_t6A89D720F7F5D8CE7A819F10781C1E48DC554C35_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CharacterSelectionEvent_t5D7AF67F47A37175CF8615AD66DEC4A0AA021392_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* CodeJson_t2BDA68A29F199AC52C3F6DA542474C1ACDDBD054_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
@@ -761,7 +762,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral55F097B2603C69F9353B2AE824F1FE43E6B46F87
 IL2CPP_EXTERN_C String_t* _stringLiteral58DEE3C05CBC174EF93C7C47DE00DF69D312A717;
 IL2CPP_EXTERN_C String_t* _stringLiteral5D9D56ECE340DEF1E16D2DAF67E12473528DDC39;
 IL2CPP_EXTERN_C String_t* _stringLiteral6177FA65ECE84BBA4632AA37AA9C897DA443D7A0;
-IL2CPP_EXTERN_C String_t* _stringLiteral63E8DBF7701C28CC7530E8CFF1D8F91621C45A8A;
 IL2CPP_EXTERN_C String_t* _stringLiteral6C066B34F4DB79023C0642AFBC43B25A5327F710;
 IL2CPP_EXTERN_C String_t* _stringLiteral71B680ABF9213B3E8FB888056C235C79CFE83314;
 IL2CPP_EXTERN_C String_t* _stringLiteral75A94EE44309525CF46FB9C022ED6E9EFAC8B506;
@@ -7493,10 +7493,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Screen_set_sleepTimeout_mB375970159A73BB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuPrincipal_BIENVENUE_clip_m9BF949D5AED1D880975559633F4B9F099A19B863 (MenuPrincipal_tA939FA16DEF9EAD8ABE1D266977FFA935BED433A* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Application::Quit()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_Quit_mE304382DB9A6455C2A474C8F364C7387F37E9281 (const RuntimeMethod* method) ;
-// System.Void UnityEngine.PlayerPrefs::SetInt(System.String,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948 (String_t* ___key0, int32_t ___value1, const RuntimeMethod* method) ;
-// System.Void UnityEngine.PlayerPrefs::DeleteKey(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30 (String_t* ___key0, const RuntimeMethod* method) ;
 // System.Single UnityEngine.PlayerPrefs::GetFloat(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float PlayerPrefs_GetFloat_m81F89D571E11218ED76DC9234CF8FAC2515FA7CB (String_t* ___key0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.PlayerPrefs::SetFloat(System.String,System.Single)
@@ -7544,6 +7540,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Quaternion__ctor_m868FD60AA6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.SceneManagement.SceneManager::LoadScene(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E (String_t* ___sceneName0, const RuntimeMethod* method) ;
+// System.Void QRScanner/CodeJson::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CodeJson__ctor_m675882A456BD8A475AD874C219AAB87CA7C16648 (CodeJson_t2BDA68A29F199AC52C3F6DA542474C1ACDDBD054* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.WebCamTexture::.ctor(System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebCamTexture__ctor_mE75D56732766528D49F3975A45C09A9A96208E99 (WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* __this, int32_t ___requestedWidth0, int32_t ___requestedHeight1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UI.RawImage::set_texture(UnityEngine.Texture)
@@ -7554,14 +7552,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebCamTexture_Stop_m6239B5D1E10C53B57BB3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* QRScanner_GetQRCode_m02E99D1B12484C1FE28FB7DA6DA572022C3BEAB0 (QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72* __this, const RuntimeMethod* method) ;
 // System.Void QRScanner/<GetQRCode>d__13::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetQRCodeU3Ed__13__ctor_m7FE5FACB779355D33880E16AB13776130E3A3F1C (U3CGetQRCodeU3Ed__13_t13C501C6DC135F102C92168E91F857D74AA7A324* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.WebCamTexture::Play()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebCamTexture_Play_mAB313C6F98D5433C414DA31DD96316BDE8D19A26 (WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* __this, const RuntimeMethod* method) ;
 // System.Collections.IEnumerator QRScanner::CheckIdCardUsername(System.String,System.String,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* QRScanner_CheckIdCardUsername_mC595DA96AC8593EF58A5F559D41D86867E980CEE (QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72* __this, String_t* ___id0, String_t* ___sceneName1, bool ___good2, const RuntimeMethod* method) ;
 // System.Void QRScanner/<CheckIdCardUsername>d__17::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCheckIdCardUsernameU3Ed__17__ctor_m14A6E84A29BE7CD7EE20C534D760A21CFDF6FA07 (U3CCheckIdCardUsernameU3Ed__17_t2B54D6AC66334BADAE6510771787661AEBCFE2F7* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // System.Void ZXing.BarcodeReader::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BarcodeReader__ctor_m038AA5B65CABABC34290AE8A9273D5466C8FCF65 (BarcodeReader_t6A89D720F7F5D8CE7A819F10781C1E48DC554C35* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.WebCamTexture::Play()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebCamTexture_Play_mAB313C6F98D5433C414DA31DD96316BDE8D19A26 (WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Texture2D::.ctor(System.Int32,System.Int32,UnityEngine.TextureFormat,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Texture2D__ctor_mECF60A9EC0638EC353C02C8E99B6B465D23BE917 (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, int32_t ___width0, int32_t ___height1, int32_t ___textureFormat2, bool ___mipChain3, const RuntimeMethod* method) ;
 // System.Void ZXing.Common.DecodingOptions::set_TryInverted(System.Boolean)
@@ -14406,57 +14404,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuPrincipal_Quitter_m37CD06803CF8C8D77
 // System.Void MenuPrincipal::BIENVENUE_clip()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuPrincipal_BIENVENUE_clip_m9BF949D5AED1D880975559633F4B9F099A19B863 (MenuPrincipal_tA939FA16DEF9EAD8ABE1D266977FFA935BED433A* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral63E8DBF7701C28CC7530E8CFF1D8F91621C45A8A);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// if (!PlayerPrefs.HasKey("quitter"))
-		bool L_0;
-		L_0 = PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3BC92B4761DD3B11D4668(_stringLiteral63E8DBF7701C28CC7530E8CFF1D8F91621C45A8A, NULL);
-		if (L_0)
-		{
-			goto IL_0042;
-		}
-	}
 	{
 		// if (As.isPlaying)
-		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1 = __this->___As_6;
-		NullCheck(L_1);
-		bool L_2;
-		L_2 = AudioSource_get_isPlaying_mC203303F2F7146B2C056CB47B9391463FDF408FC(L_1, NULL);
-		if (!L_2)
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___As_6;
+		NullCheck(L_0);
+		bool L_1;
+		L_1 = AudioSource_get_isPlaying_mC203303F2F7146B2C056CB47B9391463FDF408FC(L_0, NULL);
+		if (!L_1)
 		{
-			goto IL_0026;
+			goto IL_0019;
 		}
 	}
 	{
 		// As.Stop();
-		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_3 = __this->___As_6;
-		NullCheck(L_3);
-		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_3, NULL);
-		goto IL_0037;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___As_6;
+		NullCheck(L_2);
+		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_2, NULL);
+		return;
 	}
 
-IL_0026:
+IL_0019:
 	{
 		// As.PlayOneShot(Bienvenu);
-		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___As_6;
-		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_5 = __this->___Bienvenu_4;
-		NullCheck(L_4);
-		AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_4, L_5, NULL);
-	}
-
-IL_0037:
-	{
-		// PlayerPrefs.SetInt("quitter", 1);
-		PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948(_stringLiteral63E8DBF7701C28CC7530E8CFF1D8F91621C45A8A, 1, NULL);
-	}
-
-IL_0042:
-	{
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_3 = __this->___As_6;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_4 = __this->___Bienvenu_4;
+		NullCheck(L_3);
+		AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_3, L_4, NULL);
 		// }
 		return;
 	}
@@ -14497,15 +14470,7 @@ IL_0019:
 // System.Void MenuPrincipal::OnApplicationQuit()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuPrincipal_OnApplicationQuit_m60894F740759058B5A953EEA042B9519BE3222A7 (MenuPrincipal_tA939FA16DEF9EAD8ABE1D266977FFA935BED433A* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral63E8DBF7701C28CC7530E8CFF1D8F91621C45A8A);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// PlayerPrefs.DeleteKey("quitter");
-		PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30(_stringLiteral63E8DBF7701C28CC7530E8CFF1D8F91621C45A8A, NULL);
 		// }
 		return;
 	}
@@ -16382,6 +16347,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRScanner_ActiveQrScan_m1745865A77725306
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CodeJson_t2BDA68A29F199AC52C3F6DA542474C1ACDDBD054_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3A020C467B919BE75A2BA526FB824061987C111A);
 		s_Il2CppMethodInitialized = true;
@@ -16391,23 +16358,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRScanner_ActiveQrScan_m1745865A77725306
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___badCardPannel_11;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
+		// QrCode = string.Empty;
+		String_t* L_1 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty_6;
+		__this->___QrCode_7 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___QrCode_7), (void*)L_1);
+		// jsonCode = new CodeJson();
+		CodeJson_t2BDA68A29F199AC52C3F6DA542474C1ACDDBD054* L_2 = (CodeJson_t2BDA68A29F199AC52C3F6DA542474C1ACDDBD054*)il2cpp_codegen_object_new(CodeJson_t2BDA68A29F199AC52C3F6DA542474C1ACDDBD054_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		CodeJson__ctor_m675882A456BD8A475AD874C219AAB87CA7C16648(L_2, NULL);
+		__this->___jsonCode_12 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___jsonCode_12), (void*)L_2);
 		// finded = false;
 		__this->___finded_10 = (bool)0;
 		// var renderer = rawImage;
-		RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179* L_1 = __this->___rawImage_5;
+		RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179* L_3 = __this->___rawImage_5;
 		// webcamTexture = new WebCamTexture(512, 512);
-		WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* L_2 = (WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749*)il2cpp_codegen_object_new(WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749_il2cpp_TypeInfo_var);
-		NullCheck(L_2);
-		WebCamTexture__ctor_mE75D56732766528D49F3975A45C09A9A96208E99(L_2, ((int32_t)512), ((int32_t)512), NULL);
-		__this->___webcamTexture_6 = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___webcamTexture_6), (void*)L_2);
+		WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* L_4 = (WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749*)il2cpp_codegen_object_new(WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749_il2cpp_TypeInfo_var);
+		NullCheck(L_4);
+		WebCamTexture__ctor_mE75D56732766528D49F3975A45C09A9A96208E99(L_4, ((int32_t)512), ((int32_t)512), NULL);
+		__this->___webcamTexture_6 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___webcamTexture_6), (void*)L_4);
 		// renderer.texture = webcamTexture;
-		WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* L_3 = __this->___webcamTexture_6;
-		NullCheck(L_1);
-		RawImage_set_texture_mC016318C95CC17A826D57DD219DBCB6DFD295C02(L_1, L_3, NULL);
+		WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* L_5 = __this->___webcamTexture_6;
+		NullCheck(L_3);
+		RawImage_set_texture_mC016318C95CC17A826D57DD219DBCB6DFD295C02(L_3, L_5, NULL);
 		// Invoke("QrScanLaunch", waitTime);
-		float L_4 = __this->___waitTime_8;
-		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral3A020C467B919BE75A2BA526FB824061987C111A, L_4, NULL);
+		float L_6 = __this->___waitTime_8;
+		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral3A020C467B919BE75A2BA526FB824061987C111A, L_6, NULL);
 		// }
 		return;
 	}
@@ -16480,10 +16457,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRScanner_CallBadPannel_mDF0226FF3F54722
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)1, NULL);
 		// finded = true;
 		__this->___finded_10 = (bool)1;
-		// webcamTexture.Play();
-		WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* L_2 = __this->___webcamTexture_6;
-		NullCheck(L_2);
-		WebCamTexture_Play_mAB313C6F98D5433C414DA31DD96316BDE8D19A26(L_2, NULL);
 		// }
 		return;
 	}

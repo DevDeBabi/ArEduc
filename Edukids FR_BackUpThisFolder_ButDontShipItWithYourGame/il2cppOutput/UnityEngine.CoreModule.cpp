@@ -12453,15 +12453,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3
 	bool icallRetVal = _il2cpp_icall_func(___key0);
 	return icallRetVal;
 }
-// System.Void UnityEngine.PlayerPrefs::DeleteKey(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30 (String_t* ___key0, const RuntimeMethod* method) 
-{
-	typedef void (*PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30_ftn) (String_t*);
-	static PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.PlayerPrefs::DeleteKey(System.String)");
-	_il2cpp_icall_func(___key0);
-}
 // System.Void UnityEngine.PlayerPrefs::DeleteAll()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_DeleteAll_m7687D47AE64203DB76AC6754EC276DFFD0DFAB0E (const RuntimeMethod* method) 
 {

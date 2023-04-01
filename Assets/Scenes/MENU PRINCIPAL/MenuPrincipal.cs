@@ -29,8 +29,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void BIENVENUE_clip()
     {
-        if (!PlayerPrefs.HasKey("quitter"))
-        {
+      
             if (As.isPlaying)
             {
                 As.Stop();
@@ -40,8 +39,7 @@ public class MenuPrincipal : MonoBehaviour
                 As.PlayOneShot(Bienvenu);
             }
 
-            PlayerPrefs.SetInt("quitter", 1);
-        }
+          
     }
 
     public void SCANNECONSIGNE_clip()
@@ -59,6 +57,6 @@ public class MenuPrincipal : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        PlayerPrefs.DeleteKey("quitter");
+       // PlayerPrefs.DeleteKey("quitter");
     }
 }
