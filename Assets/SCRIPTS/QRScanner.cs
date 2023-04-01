@@ -19,6 +19,8 @@ public class QRScanner : MonoBehaviour
     public void ActiveQrScan()
     {
         badCardPannel.SetActive(false);
+        QrCode = string.Empty;
+        jsonCode = new CodeJson();
         finded = false;
         var renderer = rawImage;
         webcamTexture = new WebCamTexture(512, 512);
