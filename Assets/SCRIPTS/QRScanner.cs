@@ -66,14 +66,28 @@ public class QRScanner : MonoBehaviour
                 {
 
                     QrCode = Result.Text;
-
+                   
                     if (!string.IsNullOrEmpty(QrCode))
                     {
-                        Debug.Log("DECODED TEXT FROM QR: " + QrCode);
-                        debugTXT.text = QrCode;
-                        jsonCode= JsonUtility.FromJson<CodeJson>(QrCode);
-                        GoOnGoodScene(jsonCode.id,"",jsonCode.name);
-                        break;
+                        try
+                        {
+                            Debug.Log("DECODED TEXT FROM QR: " + QrCode);
+                            debugTXT.text = QrCode;
+                            if (debugTXT.text.ToLower().Contains("name") == false && debugTXT.text.ToLower().Contains("id") == false)
+                            {
+                                CallBadPannel();
+                                break;
+                            }
+                            jsonCode = JsonUtility.FromJson<CodeJson>(QrCode);
+                            GoOnGoodScene(jsonCode.id, "", jsonCode.name);
+                            break;
+                        }
+                        catch
+                        {
+                            CallBadPannel();
+                            break;
+                        }
+                       
                     }
                 }
             }
@@ -81,6 +95,12 @@ public class QRScanner : MonoBehaviour
             yield return null;
         }
         webcamTexture.Stop();
+    }
+    void CallBadPannel()
+    {
+        webcamTexture.Stop();
+        badCardPannel.SetActive(true);
+        finded = true;
     }
     public void DevLaunching(string sceneName)
     {
