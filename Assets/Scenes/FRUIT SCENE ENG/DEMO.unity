@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.4440681, g: 0.49333978, b: 0.57238823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4711,6 +4711,7 @@ MonoBehaviour:
     audioMiddleSentence: {fileID: 8300000, guid: d56fcda01f08c4015b480c4d171509b1, type: 3}
     perfectFind:
     - {fileID: 8300000, guid: a72c3c7f8fef643b5975f8fc56477ba4, type: 3}
+    - {fileID: 8300000, guid: c6410c2de21d44bc89db741e14d97ff9, type: 3}
     badFind:
     - {fileID: 8300000, guid: b83c652bd99d5440d8d51c88e7df3745, type: 3}
     infoNotFound: "La carte fruit est introuvable. <br/>(Mettez la en face de la
@@ -17163,6 +17164,7 @@ MonoBehaviour:
     audioMiddleSentence: {fileID: 8300000, guid: d64d15fb2f9ce514a9107b4004854e3c, type: 3}
     perfectFind:
     - {fileID: 8300000, guid: a72c3c7f8fef643b5975f8fc56477ba4, type: 3}
+    - {fileID: 8300000, guid: c6410c2de21d44bc89db741e14d97ff9, type: 3}
     badFind:
     - {fileID: 8300000, guid: b83c652bd99d5440d8d51c88e7df3745, type: 3}
     infoNotFound: "La carte fruit est introuvable. (garde la en face de la cam\xE9ra)"
