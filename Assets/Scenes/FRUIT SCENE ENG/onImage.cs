@@ -21,7 +21,8 @@ public class onImage : MonoBehaviour
         GameObject.FindObjectOfType<JeuxFruit_Manager>().Verification(isCorrect);
         if (isCorrect)
         {
-            gameObject.SetActive(false);
+            // gameObject.SetActive(false);
+            GetComponent<Image>().color = Color.black;
         }
     }
 }
